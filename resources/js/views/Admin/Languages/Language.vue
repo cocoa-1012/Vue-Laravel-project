@@ -445,13 +445,14 @@
 @media only screen and (max-width: 1024px) {
 
     .search-bar-wrapper {
-        top: 15px;
+        top: 58px;
         z-index: 7;
     }
 }
 
 
 @media only screen and (max-width: 690px) {
+
     .menu-list-wrapper.horizontal {
         top: 95px;
     }
