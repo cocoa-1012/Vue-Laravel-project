@@ -280,6 +280,14 @@
 @import '@assets/vue-file-manager/_mixins';
 @import '@assets/vue-file-manager/_forms';
 
+.router-link-active.border-bottom-theme {
+    border-bottom-color: $theme !important;
+}
+
+.router-link-active .text-theme {
+    color: $theme !important;
+}
+
 .group:hover .group-hover-text-theme {
     color: $theme !important;
 }
