@@ -65,7 +65,7 @@
                     {
                         icon: 'globe',
                         title: this.$t('admin_menu.languages'),
-                        routeName: 'Languages',
+                        routeName: 'Language',
                         isVisible: true,
                     },
                 ],
