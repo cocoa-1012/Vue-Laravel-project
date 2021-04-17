@@ -58,6 +58,11 @@ class UpgradeAppController extends Controller
                 'name'  => 'language',
                 'value' => 'en',
             ]);
+
+            // Clear cache
+            Artisan::call('cache:clear');
+            Artisan::call('config:clear');
+            Artisan::call('config:cache');
         }
 
         /*
