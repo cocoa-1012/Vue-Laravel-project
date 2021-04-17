@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\General;
 
 use App\Http\Controllers\Controller;
+use App\Language;
 use App\Page;
 use App\Setting;
 use Artisan;
-use Illuminate\Http\Request;
 use Schema;
 
 class UpgradeAppController extends Controller
@@ -39,6 +39,27 @@ class UpgradeAppController extends Controller
      */
     public function upgrade()
     {
+        /*
+         * Upgrade languages
+         *
+         * @since v1.8.3
+        */
+        if (! Schema::hasTable('languages') && ! Schema::hasTable('language_translations') ) {
+
+            $this->upgrade_database();
+
+            // Create language
+            Language::create([
+                'name'   => 'English',
+                'locale' => 'en'
+            ]);
+
+            Setting::create([
+                'name'  => 'language',
+                'value' => 'en',
+            ]);
+        }
+
         /*
          * Upgrade user_settings & file_manager_folders table
          *

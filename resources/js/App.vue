@@ -4,7 +4,10 @@
         <!--System alerts-->
         <Alert/>
 
-        <div id="application-wrapper" v-if="! isGuestLayout">
+        <div id="application-wrapper" v-if="! isGuestLayout && isLoadedTranslations">
+
+            <!-- Create language popup -->
+            <CreateLanguage/>
 
             <!-- Full File Preview -->
             <FileFullPreview/>
@@ -55,7 +58,7 @@
             </keep-alive>
         </div>
 
-        <router-view v-if="isGuestLayout"/>
+        <router-view v-if="isGuestLayout && isLoadedTranslations"/>
 
         <CookieDisclaimer/>
 
@@ -71,6 +74,7 @@ import ProcessingPopup from '@/components/FilesView/ProcessingPopup'
 import FileFullPreview from '@/components/FilesView/FileFullPreview'
 import MobileNavigation from '@/components/Others/MobileNavigation'
 import CookieDisclaimer from '@/components/Others/CookieDisclaimer'
+import CreateLanguage from '@/components/Others/CreateLanguage'
 import CreateFolder from '@/components/Others/CreateFolder'
 import MobileMenu from '@/components/FilesView/MobileMenu'
 import ShareCreate from '@/components/Others/ShareCreate'
@@ -95,6 +99,7 @@ export default {
         CookieDisclaimer,
         FileFullPreview,
         ProcessingPopup,
+        CreateLanguage,
         ToastrWrapper,
         CreateFolder,
         ShareCreate,
@@ -141,7 +146,8 @@ export default {
     },
     data() {
         return {
-            isScaledDown: false
+            isScaledDown: false,
+            isLoadedTranslations: false,
         }
     },
     methods: {
@@ -151,16 +157,22 @@ export default {
     },
     beforeMount() {
 
-        // Store config to vuex
-        this.$store.commit('INIT', {
-            authCookie: this.$root.$data.config.hasAuthCookie,
-            config: this.$root.$data.config,
-            rootDirectory: {
-                name: this.$t('locations.home'),
-                location: 'base',
-                unique_id: 0
-            }
-        })
+        // Get language translations
+        this.$store.dispatch('getLanguageTranslations', this.$root.$data.config.language)
+            .then(() => {
+                this.isLoadedTranslations = true
+
+                // Store config to vuex
+                this.$store.commit('INIT', {
+                    authCookie: this.$root.$data.config.hasAuthCookie,
+                    config: this.$root.$data.config,
+                    rootDirectory: {
+                        name: this.$t('locations.home'),
+                        location: 'base',
+                        unique_id: 0
+                    }
+                })
+            })
 
         // Get installation state
         let installation = this.$root.$data.config.installation

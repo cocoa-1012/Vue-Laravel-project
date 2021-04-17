@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\General;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SetupWizard\CreateAdminRequest;
 use App\Http\Requests\SetupWizard\StoreAppSetupRequest;
 use App\Http\Requests\SetupWizard\StoreDatabaseCredentialsRequest;
 use App\Http\Requests\SetupWizard\StoreEnvironmentSetupRequest;
 use App\Http\Requests\SetupWizard\StoreStripeBillingRequest;
 use App\Http\Requests\SetupWizard\StoreStripeCredentialsRequest;
 use App\Http\Requests\SetupWizard\StoreStripePlansRequest;
+use App\Language;
 use App\Page;
 use App\Services\StripeService;
 use App\Setting;
@@ -476,6 +476,17 @@ class SetupWizardController extends Controller
         $pages->each(function ($page) {
             Page::updateOrCreate($page);
         });
+
+        // Create language
+        Language::create([
+            'name'   => 'English',
+            'locale' => 'en'
+        ]);
+
+        Setting::create([
+            'name'  => 'language',
+            'value' => 'en',
+        ]);
 
         // Retrieve access token
         $response = Route::dispatch(self::make_login_request($request));

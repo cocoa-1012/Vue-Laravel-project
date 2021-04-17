@@ -336,7 +336,7 @@
                         <tr>
                             <td colspan="3" style="text-align: right;">
                                 {{ $tax->display_name }} {{ $tax->jurisdiction ? ' - '.$tax->jurisdiction : '' }}
-                                ({{ $tax->percentage }}%{{ $tax->isInclusive() ? ' ' . __('vuefilemanager.vat_included') : '' }})
+                                ({{ $tax->percentage }}%{{ $tax->isInclusive() ? ' ' . __t('vat_included') : '' }})
                             </td>
                             <td>{{ $tax->amount() }}</td>
                         </tr>

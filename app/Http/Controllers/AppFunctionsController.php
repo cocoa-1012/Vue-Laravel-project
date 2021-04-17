@@ -8,6 +8,7 @@ use App\FileManagerFolder;
 use App\Http\Requests\PublicPages\SendMessageRequest;
 use App\Http\Resources\PageResource;
 use App\Http\Tools\Demo;
+use App\Language;
 use App\Mail\SendSupportForm;
 use App\Page;
 use App\Setting;
@@ -15,6 +16,7 @@ use App\User;
 use Artisan;
 use Doctrine\DBAL\Driver\PDOException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 use Schema;
 
@@ -257,5 +259,22 @@ class AppFunctionsController extends Controller
         $emojisList = json_decode(file_get_contents(public_path('assets/emojis.json'), true));
 
         return collect([$emojisList]);
+    }
+
+    /**
+     * Get language translations for frontend app
+     *
+     * @param $lang
+     * @return array
+     */
+    public function get_translations($lang)
+    {
+        $translations = Cache::rememberForever("language-translations-$lang", function () use ($lang) {
+            return Language::whereLocale($lang)
+                ->firstOrFail()
+                ->languageTranslations;
+        });
+
+        return map_language_translations($translations);
     }
 }

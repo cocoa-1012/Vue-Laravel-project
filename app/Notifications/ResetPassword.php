@@ -43,12 +43,12 @@ class ResetPassword extends Notification
         $reset_url = url('/create-new-password?token=' . $this->token);
 
         return (new MailMessage)
-            ->subject(__('vuefilemanager.reset_password_subject') . config('vuefilemanager.app_name'))
-            ->greeting(__('vuefilemanager.reset_password_greeting'))
-            ->line(__('vuefilemanager.reset_password_line_1'))
-            ->action(__('vuefilemanager.reset_password_action'), $reset_url)
-            ->line(__('vuefilemanager.reset_password_line_2'))
-            ->salutation(__('vuefilemanager.salutation') . ', ' . config('vuefilemanager.app_name'));
+            ->subject(__t('reset_password_subject') . config('vuefilemanager.app_name'))
+            ->greeting(__t('reset_password_greeting'))
+            ->line(__t('reset_password_line_1'))
+            ->action(__t('reset_password_action'), $reset_url)
+            ->line(__t('reset_password_line_2'))
+            ->salutation(__t('salutation') . ', ' . config('vuefilemanager.app_name'));
     }
 
     /**

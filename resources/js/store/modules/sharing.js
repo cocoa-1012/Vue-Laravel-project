@@ -6,12 +6,12 @@ import axios from 'axios'
 const defaultState = {
     permissionOptions: [
         {
-            label: i18n.t('shared.editor'),
+            label: 'shared.editor',
             value: 'editor',
             icon: 'user-edit',
         },
         {
-            label: i18n.t('shared.visitor'),
+            label: 'shared.visitor',
             value: 'visitor',
             icon: 'user',
         },

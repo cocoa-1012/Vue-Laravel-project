@@ -17,6 +17,9 @@ Route::post('/stripe/webhook', 'WebhookController@handleWebhook');
 // Deployment WebHook URL
 Route::post('/deploy/github', 'DeployController@github');
 
+// Language
+Route::get('/translations/{lang}', 'AppFunctionsController@get_translations');
+
 // App public files
 Route::get('/avatars/{avatar}', 'FileAccessController@get_avatar')->name('avatar');
 Route::get('/system/{image}', 'FileAccessController@get_system_image');
@@ -40,6 +43,7 @@ Route::group(['middleware' => ['auth:api', 'auth.master', 'scope:master']], func
 
 // Admin system tools
 Route::get('/service/upgrade', 'General\UpgradeAppController@upgrade');
+
 Route::group(['middleware' => ['auth:api', 'auth.master', 'auth.admin', 'scope:master'], 'prefix' => 'service'], function () {
     Route::get('/down', 'General\UpgradeAppController@down');
     Route::get('/up', 'General\UpgradeAppController@up');

@@ -2,6 +2,7 @@
 
 use App\FileManagerFile;
 use App\FileManagerFolder;
+use App\Language;
 use App\User;
 use App\Setting;
 use App\Share;
@@ -11,6 +12,82 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as Image;
+
+/**
+ * Translate the given message.
+ *
+ * @param $key
+ * @param null $values
+ * @return string|string[]
+ */
+function __t($key, $values = null)
+{
+    // Get current locale
+    $locale = cache()->rememberForever('language', function () {
+        return get_setting('language') ?? 'en';
+    });
+
+    $strings = cache()->rememberForever("language-translations-$locale", function () use ($locale) {
+        return Language::whereLocale($locale)->first()->languageTranslations ?? get_default_language_translations();
+    });
+
+    // Find the string by key
+    $string = $strings->get($key)
+        ? $strings->get($key)
+        : $strings->firstWhere('key', $key)->value;
+
+    if ($values) {
+        return replace_occurrence($string, collect($values));
+    }
+
+    return $string;
+}
+
+/**
+ * Replace string occurrence in __t() by their values
+ *
+ * @param $string
+ * @param $values
+ * @return string|string[]
+ */
+function replace_occurrence($string, $values)
+{
+    $occurrences = $values->map(function ($message, $key) {
+        return [
+            'key'     => ":$key",
+            'message' => $message,
+        ];
+    });
+
+    return str_ireplace(
+        $occurrences->pluck('key')->toArray(), $occurrences->pluck('message')->toArray(), $string
+    );
+}
+
+/**
+ * @return \Illuminate\Support\Collection
+ */
+function get_default_language_translations()
+{
+    return collect([
+        config("language-translations.extended"),
+        config("language-translations.regular"),
+        config("custom-language-translations")
+    ])->collapse();
+}
+
+/**
+ * It map language translations as language key and language value
+ *
+ * @param $translations
+ * @return mixed
+ */
+function map_language_translations($translations)
+{
+    return $translations->map(function ($string) {
+        return [$string->key => $string->value];
+    })->collapse();
+}
 
 /**
  * Obfuscate email
