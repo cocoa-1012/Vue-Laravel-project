@@ -265,16 +265,22 @@ class AppFunctionsController extends Controller
      * Get language translations for frontend app
      *
      * @param $lang
-     * @return array
+     * @return \Illuminate\Support\Collection
      */
     public function get_translations($lang)
     {
-        $translations = Cache::rememberForever("language-translations-$lang", function () use ($lang) {
-            return Language::whereLocale($lang)
-                ->firstOrFail()
-                ->languageTranslations;
-        });
+        try {
+            \DB::getPdo();
 
-        return map_language_translations($translations);
+            $translations = Cache::rememberForever("language-translations-$lang", function () use ($lang) {
+                return Language::whereLocale($lang)->first()->languageTranslations;
+            });
+
+            return map_language_translations($translations);
+
+        } catch (PDOException $e) {
+
+            return get_default_language_translations();
+        }
     }
 }
