@@ -2,6 +2,8 @@
 
 return [
     'extended' => [
+        "global.saas"                                         => "Services",
+        "global.subscription"                                 => "Subscription",
         "activation.stripe.button"                            => "Set up your Stripe account",
         "activation.stripe.description"                       => "To charge your users, please set up your Stripe account credentials.",
         "activation.stripe.title"                             => "Your Stripe account is not set",
@@ -204,6 +206,9 @@ return [
         'total'                                               => 'Total',
     ],
     'regular'  => [
+        "routes_title.profile_settings"                    => "Profile Settings",
+        "routes_title.settings_mobile"                     => "Settings",
+        "global.menu"                                      => "Menu",
         "actions.close"                                    => "Close",
         "actions.create_folder"                            => "Create folder",
         "actions.delete"                                   => "Delete item",

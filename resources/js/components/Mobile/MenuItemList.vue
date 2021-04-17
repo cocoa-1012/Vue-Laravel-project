@@ -2,6 +2,7 @@
     <ul class="link-group">
         <router-link :to="{name: link.routeName}" v-for="(link, i) in navigation" :key="i" v-if="link.isVisible" :class="link.icon" class="link-item" @click.native="$emit('menu', link.icon)">
             <div class="menu-icon">
+                <globe-icon v-if="link.icon === 'globe'" size="17"></globe-icon>
                 <hard-drive-icon v-if="link.icon === 'hard-drive'" size="17"></hard-drive-icon>
                 <share-icon v-if="link.icon === 'share'" size="17"></share-icon>
                 <trash2-icon v-if="link.icon === 'trash'" size="17"></trash2-icon>
@@ -28,6 +29,7 @@
 
 <script>
     import {
+        GlobeIcon,
         ChevronRightIcon,
         UploadCloudIcon,
         CreditCardIcon,
@@ -49,6 +51,7 @@
     export default {
         name: 'MenuBar',
         components: {
+            GlobeIcon,
             BoxIcon,
             MonitorIcon,
             ChevronRightIcon,
