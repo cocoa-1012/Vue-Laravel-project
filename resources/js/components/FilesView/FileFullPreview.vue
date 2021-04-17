@@ -1,96 +1,77 @@
 <template>
-	<div
-		v-if="showFullPreview"
-		class="file-full-preview-wrapper"
-		id="fileFullPreview"
-		ref="filePreview"
-		tabindex="-1"
-		@click="closeContextMenu"
-		@keydown.esc=";(showFullPreview = false), hideContextMenu()"
-		@keydown.right="next"
-		@keydown.left="prev"
-	>
-		<FilePreviewNavigationPanel />
-		<MediaFullPreview />
-		<FilePreviewActions />
-	</div>
+    <div
+        v-if="isFullPreview"
+        class="file-preview"
+        ref="filePreview"
+        tabindex="-1"
+        @keydown.esc="closeFilePreview"
+        @keydown.right="next"
+        @keydown.left="prev"
+    >
+        <FilePreviewToolbar />
+        <FilePreviewMedia />
+    </div>
 </template>
 
 <script>
-import { events } from '@/bus'
-import { mapGetters } from 'vuex'
-
-import MediaFullPreview from '@/components/FilesView/MediaFullPreview'
-import FilePreviewActions from '@/components/FilesView/FilePreviewActions'
-import FilePreviewNavigationPanel from '@/components/FilesView/FilePreviewNavigationPanel'
+import FilePreviewToolbar from '@/components/FilesView/FilePreviewNavigationPanel'
+import FilePreviewMedia from '@/components/FilesView/MediaFullPreview'
+import {events} from '@/bus'
 
 export default {
-	name: 'FileFullPreview',
-	components: {
-		MediaFullPreview,
-		FilePreviewNavigationPanel,
-		FilePreviewActions
-	},
-	computed: {
-		...mapGetters(['fileInfoDetail', 'data'])
-	},
-	data() {
-		return {
-			showFullPreview: false
-		}
-	},
-	methods: {
-		closeContextMenu(event) {
-			if ((event.target.parentElement.id || event.target.id) === 'fast-preview-menu') {
-				return
-			} else {
-				events.$emit('showContextMenuPreview:hide')
-			}
-		},
-		next: function() {
-			events.$emit('filePreviewAction:next')
-		},
-		prev: function() {
-			events.$emit('filePreviewAction:prev')
-		},
-		hideContextMenu() {
-			events.$emit('showContextMenuPreview:hide')
-		}
-	},
+    name: 'FilePreview',
+    components: {
+        FilePreviewToolbar,
+        FilePreviewMedia,
+    },
+    data() {
+        return {
+            isFullPreview: false
+        }
+    },
+    methods: {
+        closeFilePreview() {
+            this.isFullPreview = false
 
-	updated() {
-		//Focus file preview for key binding
-		if (this.showFullPreview) {
-			this.$refs.filePreview.focus()
-		}
-	},
-	mounted() {
-		events.$on('fileFullPreview:show', () => {
-			this.showFullPreview = true
-		})
-		events.$on('fileFullPreview:hide', () => {
-			this.showFullPreview = false
-
-            events.$emit('hide:mobile-navigation')
+            events.$emit('showContextMenuPreview:hide')
+        },
+        next() {
+            events.$emit('file-preview:next')
+        },
+        prev() {
+            events.$emit('file-preview:prev')
+        }
+    },
+    updated() {
+        if (this.isFullPreview) {
+            this.$refs.filePreview.focus()
+        }
+    },
+    mounted() {
+        events.$on('fileFullPreview:show', () => {
+            this.isFullPreview = true
         })
-	}
+        events.$on('fileFullPreview:hide', () => {
+            this.isFullPreview = false
+        })
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '@assets/vue-file-manager/_variables';
 
-.file-full-preview-wrapper {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 7;
-	background-color: white;
+.file-preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 7;
+    background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
-	.file-full-preview-wrapper {
-		background-color: $dark_mode_background;
-	}
+    .file-preview {
+        background-color: $dark_mode_background;
+    }
 }
 </style>
