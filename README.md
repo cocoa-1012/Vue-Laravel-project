@@ -24,7 +24,6 @@
 - [Developers](#developers)
     - [Running development environment on your localhost](#running-development-environment-on-your-localhost)
     - [Supported Storages](#supported-storages)
-    - [How to Create New Language](#how-to-create-new-language)
 - [Others](#others)
     - [Changelog](#changelog)
     - [GitHub Repository](#github-repository)
@@ -302,51 +301,6 @@ To set or change your storage driver, you have to edit `FILESYSTEM_DRIVER` in yo
 FILESYSTEM_DRIVER=local
 ```
 Then you can find corresponding credentials options for your storage driver like key, secret, region in `/.env` file.
-
-
-## How to Create New Language
-VueFileManager front-end support i18n standard for localization. This mean, you can translate app to any language
-
-### How to create translation for Vue Front-End
-Go to `/resources/js/i18n/lang` And make copy of `en.json` and rename it to your local name (eg: Slovak language has 'sk' shortcut, it means `sk.json`). If you have created your copy, then feel free to translate this file.
-
-Open `/resources/js/i18n/index.js` import your new language and assign it to languages object:
-
-```
-import Vue from 'vue';
-import VueI18n from 'vue-i18n';
-
-import en from './lang/en.json'
-import sk from './lang/sk.json'
-
-Vue.use(VueI18n);
-
-const i18n = new VueI18n({
-    locale: config.locale,
-    messages: Object.assign({
-        en,
-        sk
-    }),
-});
-
-export default i18n;
-```
-After this, you have to compile language to your application code via this command in your terminal:
-```
-npm run prod
-```
-
-### How to Create Translation for Laravel Back-End
-Go to `/resources/lang/` And make copy of `en` folder and rename it to your local name (eg: Slovak language has 'sk' shortcut, it means `sk`). If you have created your copy, then feel free to translate this file.
-
-### Set locale
-To set your locale in app, go to `/config/app.php` and set your locale string in `locale` option:
-
-```
-'locale' => 'YOUR_LOCALE',
-```
-
-**Small hint:** We use for translating localizations this awesome software, [check it](https://www.codeandweb.com/babeledit). 
 
 # Others
 ## Changelog
