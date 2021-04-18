@@ -7,6 +7,8 @@ use App\Language;
 use App\Page;
 use App\Setting;
 use Artisan;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Schema;
 
 class UpgradeAppController extends Controller
@@ -15,7 +17,8 @@ class UpgradeAppController extends Controller
     /**
      *  Start maintenance mode
      */
-    public function up() {
+    public function up()
+    {
         $command = Artisan::call('up');
 
         if ($command === 0) {
@@ -26,7 +29,8 @@ class UpgradeAppController extends Controller
     /**
      *  End maintenance mode
      */
-    public function down() {
+    public function down()
+    {
         $command = Artisan::call('down');
 
         if ($command === 0) {
@@ -44,22 +48,46 @@ class UpgradeAppController extends Controller
          *
          * @since v1.8.3
         */
-        if (! Schema::hasTable('languages') && ! Schema::hasTable('language_translations') ) {
+        if (!Schema::hasTable('languages') && !Schema::hasTable('language_translations')) {
 
             $this->upgrade_database();
-
-            // Create language
-            Language::create([
-                'name'   => 'English',
-                'locale' => 'en'
-            ]);
 
             Setting::create([
                 'name'  => 'language',
                 'value' => 'en',
             ]);
 
-            // Clear cache
+            DB::table('languages')
+                ->insert([
+                    'id'   => Str::uuid(),
+                    'name'   => 'English',
+                    'locale' => 'en'
+                ]);
+
+            $translations = [
+                'extended' => collect([
+                    config("language-translations.extended"),
+                    config("language-translations.regular"),
+                    config("custom-language-translations")
+                ])->collapse(),
+                'regular'  => collect([
+                    config("language-translations.regular"),
+                    config("custom-language-translations")
+                ])->collapse(),
+            ];
+
+            $translations = $translations[strtolower(get_setting('license'))]
+                ->map(function ($value, $key) {
+                    return [
+                        'lang'  => 'en',
+                        'value' => $value,
+                        'key'   => $key,
+                    ];
+                })->toArray();
+
+            DB::table('language_translations')
+                ->insert($translations);
+
             Artisan::call('cache:clear');
             Artisan::call('config:clear');
             Artisan::call('config:cache');
@@ -70,7 +98,7 @@ class UpgradeAppController extends Controller
          *
          * @since v1.8.1
         */
-        if (! Schema::hasColumn('user_settings', 'timezone') && ! Schema::hasColumn('file_manager_folders', 'icon_color')) {
+        if (!Schema::hasColumn('user_settings', 'timezone') && !Schema::hasColumn('file_manager_folders', 'icon_color')) {
 
             $this->upgrade_database();
 
@@ -95,7 +123,7 @@ class UpgradeAppController extends Controller
          *
          * @since v1.8
         */
-        if (! Schema::hasTable('traffic') && ! Schema::hasTable('zips') && ! Schema::hasTable('jobs')) {
+        if (!Schema::hasTable('traffic') && !Schema::hasTable('zips') && !Schema::hasTable('jobs')) {
 
             $this->upgrade_database();
         }
@@ -104,7 +132,7 @@ class UpgradeAppController extends Controller
          *
          * @since v1.8
         */
-        if (! Schema::hasTable('traffic') && ! Schema::hasTable('zips') && ! Schema::hasTable('jobs')) {
+        if (!Schema::hasTable('traffic') && !Schema::hasTable('zips') && !Schema::hasTable('jobs')) {
 
             $this->upgrade_database();
         }
@@ -114,7 +142,7 @@ class UpgradeAppController extends Controller
          *
          * @since v1.7.9
         */
-        if (! Schema::hasColumn('shares', 'expire_in')) {
+        if (!Schema::hasColumn('shares', 'expire_in')) {
 
             $this->upgrade_database();
         }
@@ -124,7 +152,7 @@ class UpgradeAppController extends Controller
          *
          * @since v1.7.11
         */
-        if (! Schema::hasColumn('file_manager_files', 'metadata')) {
+        if (!Schema::hasColumn('file_manager_files', 'metadata')) {
 
             $this->upgrade_database();
         }

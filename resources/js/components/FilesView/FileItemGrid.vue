@@ -1,5 +1,5 @@
 <template>
-    <div class="file-wrapper" @click.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
+    <div class="file-wrapper" @mousedown.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
         <!--Grid preview-->
         <div :draggable="canDrag" @dragstart="$emit('dragstart')" @drop="
 				drop()
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <span @click.stop="showItemActions" class="show-actions" v-if="$isMobile() && ! multiSelectMode && canShowMobileOptions">
+            <span @mousedown.stop="showItemActions" class="show-actions" v-if="$isMobile() && ! multiSelectMode && canShowMobileOptions">
                 <FontAwesomeIcon icon="ellipsis-h" class="icon-action"></FontAwesomeIcon>
             </span>
         </div>
@@ -213,20 +213,19 @@ export default {
                 }
             }
 
-            if (!this.multiSelectMode && this.$isMobile()) {
-                // Open in mobile version on first click
-                if (this.$isMobile() && this.isFolder) {
-                    // Go to folder
+            if (!this.mobileMultiSelect && this.$isMobile()) {
+
+                if (this.isFolder) {
+
                     if (this.$isThisLocation('public')) {
                         this.$store.dispatch('browseShared', [{ folder: this.item, back: false, init: false }])
                     } else {
                         this.$store.dispatch('getFolder', [{ folder: this.item, back: false, init: false }])
                     }
-                }
+                } else {
 
-                if (this.$isMobile()) {
                     if (this.isImage || this.isVideo || this.isAudio || this.isPdf) {
-                        this.$store.commit('GET_FILEINFO_DETAIL', this.item)
+                        this.$store.commit('LOAD_FILEINFO_DETAIL', this.item)
                         events.$emit('fileFullPreview:show')
                     }
                 }

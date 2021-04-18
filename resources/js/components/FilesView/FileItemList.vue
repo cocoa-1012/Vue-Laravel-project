@@ -1,5 +1,5 @@
 <template>
-    <div class="file-wrapper" @click.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
+    <div class="file-wrapper" @mousedown.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
         <!--List preview-->
         <div
             :draggable="canDrag"
@@ -7,7 +7,7 @@
             @drop="drop()"
             @dragleave="dragLeave"
             @dragover.prevent="dragEnter"
-            class="file-item" :class="{'is-clicked' : isClicked , 'no-clicked' : !isClicked && this.$isMobile(), 'is-dragenter': area }"
+            class="file-item" :class="{'is-clicked': isClicked, 'no-clicked' : !isClicked && this.$isMobile(), 'is-dragenter': area }"
         >
             <!-- MultiSelecting for the mobile version -->
             <transition name="slide-from-left">
@@ -63,7 +63,7 @@
             <!--Show item actions-->
             <transition name="slide-from-right">
                 <div class="actions" v-if="$isMobile() && ! mobileMultiSelect">
-                    <span @click.stop="showItemActions" class="show-actions">
+                    <span @mousedown.stop="showItemActions" class="show-actions">
                         <FontAwesomeIcon icon="ellipsis-v" class="icon-action"></FontAwesomeIcon>
                     </span>
                 </div>
@@ -209,19 +209,18 @@ export default {
             }
 
             if (!this.mobileMultiSelect && this.$isMobile()) {
-                // Open in mobile version on first click
-                if (this.$isMobile() && this.isFolder) {
-                    // Go to folder
+
+                if (this.isFolder) {
+
                     if (this.$isThisLocation('public')) {
                         this.$store.dispatch('browseShared', [{ folder: this.item, back: false, init: false }])
                     } else {
                         this.$store.dispatch('getFolder', [{ folder: this.item, back: false, init: false }])
                     }
-                }
+                } else {
 
-                if (this.$isMobile()) {
                     if (this.isImage || this.isVideo || this.isAudio || this.isPdf) {
-                        this.$store.commit('GET_FILEINFO_DETAIL', this.item)
+                        this.$store.commit('LOAD_FILEINFO_DETAIL', this.item)
                         events.$emit('fileFullPreview:show')
                     }
                 }
