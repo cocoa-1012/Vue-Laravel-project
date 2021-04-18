@@ -122,7 +122,7 @@ export default {
         },
         menuOpen() {
             if (this.$isMobile()) {
-                events.$emit('mobile-menu:show', 'file-menu')
+                events.$emit('mobileMenu:show', 'showFromMediaPreview')
             } else {
                 events.$emit('showContextMenuPreview:show', this.fileInfoDetail[0])
             }
