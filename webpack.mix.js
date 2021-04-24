@@ -31,7 +31,7 @@ mix.js('resources/js/main.js', 'public/js')
             host: '192.168.1.198',
             port: '8080'
         },
-    }*/
+    })*/
     .disableNotifications();
 
 if (mix.inProduction()) {

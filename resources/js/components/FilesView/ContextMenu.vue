@@ -422,7 +422,6 @@ export default {
 
         })
 
-
         events.$on('contextMenu:show', (event, item) => {
             // Store item
             this.item = item
