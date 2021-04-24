@@ -1,5 +1,5 @@
 <template>
-    <div class="file-wrapper" @mousedown.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
+    <div class="file-wrapper" @mouseup.stop="clickedItem" @dblclick="goToItem" spellcheck="false">
         <!--List preview-->
         <div
             :draggable="canDrag"
