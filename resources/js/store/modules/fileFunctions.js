@@ -202,33 +202,36 @@ const actions = {
 				.then(response => {
 					resolve(response)
 
-					commit('PROCESSING_FILE', false)
+					// Proceed if was returned database record
+					if (response.data.id) {
 
-					// Remove first file from file queue
-					commit('SHIFT_FROM_FILE_QUEUE')
+						commit('PROCESSING_FILE', false)
 
-					// Check if user is in uploading folder, if yes, than show new file
-					if (response.data.folder_id == getters.currentFolder.unique_id) {
+						// Remove first file from file queue
+						commit('SHIFT_FROM_FILE_QUEUE')
 
-						// Add uploaded item into view
-						commit('ADD_NEW_ITEMS', response.data)
+						// Check if user is in uploading folder, if yes, than show new file
+						if (response.data.folder_id == getters.currentFolder.unique_id) {
 
-						// Reset file progress
-						commit('UPLOADING_FILE_PROGRESS', 0)
+							// Add uploaded item into view
+							commit('ADD_NEW_ITEMS', response.data)
 
-						// Increase count in files in queue uploaded for 1
-						commit('INCREASE_FILES_IN_QUEUE_UPLOADED')
+							// Reset file progress
+							commit('UPLOADING_FILE_PROGRESS', 0)
+
+							// Increase count in files in queue uploaded for 1
+							commit('INCREASE_FILES_IN_QUEUE_UPLOADED')
+						}
+
+						// Start uploading next file if file queue is not empty
+						if (getters.fileQueue.length) {
+							Vue.prototype.$handleUploading(getters.fileQueue[0])
+						}
+
+						// Reset upload process
+						if (! getters.fileQueue.length)
+							commit('CLEAR_UPLOAD_PROGRESS')
 					}
-
-					// Start uploading next file if file queue is not empty
-					if (getters.fileQueue.length) {
-						Vue.prototype.$handleUploading(getters.fileQueue[0])
-					}
-
-					// Reset upload process
-					if (! getters.fileQueue.length)
-						commit('CLEAR_UPLOAD_PROGRESS')
-
 				})
 				.catch(error => {
 					reject(error)
