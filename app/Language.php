@@ -41,10 +41,10 @@ class Language extends Model
         static::creating(function ($language) {
             $language->id = Str::uuid();
 
-            resolve(LanguageService::class)
+            /*resolve(LanguageService::class)
                 ->create_default_language_translations(
                     get_setting('license') ?? 'extended', $language->locale
-                );
+                );*/
         });
 
         static::updating(function ($language) {

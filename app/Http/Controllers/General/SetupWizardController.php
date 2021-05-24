@@ -483,6 +483,30 @@ class SetupWizardController extends Controller
             'locale' => 'en'
         ]);
 
+        $translations = [
+            'extended' => collect([
+                config("language-translations.extended"),
+                config("language-translations.regular"),
+                config("custom-language-translations")
+            ])->collapse(),
+            'regular'  => collect([
+                config("language-translations.regular"),
+                config("custom-language-translations")
+            ])->collapse(),
+        ];
+
+        $translations = $translations[strtolower($request->license)]
+            ->map(function ($value, $key) {
+                return [
+                    'lang'  => 'en',
+                    'value' => $value,
+                    'key'   => $key,
+                ];
+            })->toArray();
+
+        DB::table('language_translations')
+            ->insert($translations);
+
         Setting::create([
             'name'  => 'language',
             'value' => 'en',

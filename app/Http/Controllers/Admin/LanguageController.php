@@ -13,6 +13,7 @@ use Illuminate\Http\Response;
 use App\Http\Requests\Languages\UpdateStringRequest;
 use App\Http\Requests\Languages\CreateLanguageRequest;
 use App\Http\Requests\Languages\UpdateLanguageRequest;
+use Illuminate\Support\Facades\DB;
 
 class LanguageController extends Controller
 {
@@ -55,6 +56,30 @@ class LanguageController extends Controller
             'name'   => $request->input('name'),
             'locale' => $request->input('locale')
         ]);
+
+        $translations = [
+            'extended' => collect([
+                config("language-translations.extended"),
+                config("language-translations.regular"),
+                config("custom-language-translations")
+            ])->collapse(),
+            'regular'  => collect([
+                config("language-translations.regular"),
+                config("custom-language-translations")
+            ])->collapse(),
+        ];
+
+        $translations = $translations[strtolower(get_setting('license'))]
+            ->map(function ($value, $key) use ($language) {
+                return [
+                    'lang'  => $language->locale,
+                    'value' => $value,
+                    'key'   => $key,
+                ];
+            })->toArray();
+
+        DB::table('language_translations')
+            ->insert($translations);
 
         return response(
             new LanguageResource($language), 201
