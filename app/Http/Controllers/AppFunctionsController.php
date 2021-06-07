@@ -15,6 +15,8 @@ use App\Setting;
 use App\User;
 use Artisan;
 use Doctrine\DBAL\Driver\PDOException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
@@ -272,11 +274,20 @@ class AppFunctionsController extends Controller
         try {
             \DB::getPdo();
 
-            $translations = Cache::rememberForever("language-translations-$lang", function () use ($lang) {
-                return Language::whereLocale($lang)->first()->languageTranslations;
-            });
+            $translations = cache()
+                ->rememberForever("language-translations-$lang", function () use ($lang) {
+                    try {
+                        return Language::whereLocale($lang)
+                            ->firstOrFail()
+                            ->languageTranslations;
+                    } catch (QueryException | ModelNotFoundException $e) {
+                        return null;
+                    }
+                });
 
-            return map_language_translations($translations);
+            return $translations
+                ? map_language_translations($translations)
+                : get_default_language_translations();
 
         } catch (PDOException $e) {
 

@@ -9,6 +9,8 @@ use App\Share;
 use ByteUnits\Metric;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -33,17 +35,15 @@ function __t($key, $values = null)
 
     // Get language strings
     $strings = cache()->rememberForever("language-translations-$locale", function () use ($locale) {
-        try {
-            return Language::whereLocale($locale)->first()->languageTranslations ?? get_default_language_translations();
-        } catch (\Illuminate\Database\QueryException $e) {
-            return get_default_language_translations();
-        }
-    });
+            try {
+                return Language::whereLocale($locale)->firstOrFail()->languageTranslations;
+            } catch (QueryException | ModelNotFoundException $e) {
+                return null;
+            }
+        }) ?? get_default_language_translations();
 
     // Find the string by key
-    $string = $strings->get($key)
-        ? $strings->get($key)
-        : $strings->firstWhere('key', $key)->value;
+    $string = $strings->firstWhere('key', $key)->value ?? $strings->get($key);
 
     if ($values) {
         return replace_occurrence($string, collect($values));

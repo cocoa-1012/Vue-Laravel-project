@@ -4,6 +4,7 @@ namespace App\Http\Controllers\General;
 
 use App\Http\Controllers\Controller;
 use App\Language;
+use App\LanguageTranslation;
 use App\Page;
 use App\Setting;
 use Artisan;
@@ -38,6 +39,69 @@ class UpgradeAppController extends Controller
         }
     }
 
+    public function translations_fix()
+    {
+        if (!Schema::hasTable('languages') && !Schema::hasTable('language_translations')) {
+            $this->upgrade_database();
+        }
+
+        $setting = Setting::firstWhere('name', 'language');
+
+        if (!$setting) {
+            Setting::create([
+                'name'  => 'language',
+                'value' => 'en',
+            ]);
+        }
+
+        $locale = Language::firstWhere('locale', 'en');
+
+        if (!$locale) {
+            DB::table('languages')
+                ->insert([
+                    'id'     => Str::uuid(),
+                    'name'   => 'English',
+                    'locale' => 'en'
+                ]);
+        }
+
+        $translations = LanguageTranslation::firstWhere('key', 'alerts.error_confirm');
+
+        if (!$translations) {
+            $translations = [
+                'extended' => collect([
+                    config("language-translations.extended"),
+                    config("language-translations.regular"),
+                    config("custom-language-translations")
+                ])->collapse(),
+                'regular'  => collect([
+                    config("language-translations.regular"),
+                    config("custom-language-translations")
+                ])->collapse(),
+            ];
+
+            $translations = $translations[strtolower(get_setting('license'))]
+                ->map(function ($value, $key) {
+                    return [
+                        'lang'  => 'en',
+                        'value' => $value,
+                        'key'   => $key,
+                    ];
+                })->toArray();
+
+            $chunks = array_chunk($translations, 100);
+
+            foreach ($chunks as $chunk) {
+                DB::table('language_translations')
+                    ->insert($chunk);
+            }
+        }
+
+        Artisan::call('cache:clear');
+        Artisan::call('config:clear');
+        Artisan::call('config:cache');
+    }
+
     /**
      *  Upgrade database
      */
@@ -59,7 +123,7 @@ class UpgradeAppController extends Controller
 
             DB::table('languages')
                 ->insert([
-                    'id'   => Str::uuid(),
+                    'id'     => Str::uuid(),
                     'name'   => 'English',
                     'locale' => 'en'
                 ]);
@@ -85,8 +149,12 @@ class UpgradeAppController extends Controller
                     ];
                 })->toArray();
 
-            DB::table('language_translations')
-                ->insert($translations);
+            $chunks = array_chunk($translations, 100);
+
+            foreach ($chunks as $chunk) {
+                DB::table('language_translations')
+                    ->insert($chunk);
+            }
 
             Artisan::call('cache:clear');
             Artisan::call('config:clear');

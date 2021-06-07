@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth:api', 'auth.master', 'scope:master']], func
 
 // Admin system tools
 Route::get('/service/upgrade', 'General\UpgradeAppController@upgrade');
+Route::get('/service/translations', 'General\UpgradeAppController@translations_fix');
 
 Route::group(['middleware' => ['auth:api', 'auth.master', 'auth.admin', 'scope:master'], 'prefix' => 'service'], function () {
     Route::get('/down', 'General\UpgradeAppController@down');

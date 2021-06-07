@@ -78,8 +78,12 @@ class LanguageController extends Controller
                 ];
             })->toArray();
 
-        DB::table('language_translations')
-            ->insert($translations);
+        $chunks = array_chunk($translations, 100);
+
+        foreach ($chunks as $chunk) {
+            DB::table('language_translations')
+                ->insert($chunk);
+        }
 
         return response(
             new LanguageResource($language), 201
