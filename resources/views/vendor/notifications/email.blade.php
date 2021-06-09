@@ -44,6 +44,6 @@
 {{ $salutation }}
 @else
 @lang('Regards'),<br>
-{{ config('app.name') }}
+{{ get_setting('app_title') ?? 'VueFileManager' }}
 @endif
 @endcomponent
