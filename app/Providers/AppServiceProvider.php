@@ -30,10 +30,13 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        $get_time_locale = App::getLocale() . '_' . mb_strtoupper(App::getLocale());
+        $app_language = get_setting('language') ?? 'en';
+
+        // Set locale for application
+        app()->setLocale($app_language);
 
         // Set locale for carbon dates
-        setlocale(LC_TIME, $get_time_locale);
+        setlocale(LC_TIME, $app_language . '_' . mb_strtoupper($app_language));
 
         // Install passport commands
         $this->commands([

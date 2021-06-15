@@ -38,7 +38,7 @@
             host: '{{ url('/') }}',
             api: '{{ url('/api') }}',
 
-            locale: '{{ \Illuminate\Support\Facades\App::getLocale() }}',
+            locale: '{{ app()->getLocale() }}',
 			language: '{{ isset($settings->language) && $settings->language ? $settings->language : 'en' }}',
 
 			app_name: '{{ isset($settings->app_title) && $settings->app_title ? $settings->app_title : 'VueFileManager' }}',
