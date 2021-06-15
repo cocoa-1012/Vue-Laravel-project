@@ -212,7 +212,7 @@ class User extends Authenticatable
     public function getAvatarAttribute()
     {
         // Get avatar from external storage
-        if ($this->attributes['avatar'] && is_storage_driver(['s3', 'spaces', 'wasabi', 'backblaze'])) {
+        if ($this->attributes['avatar'] && is_storage_driver(['s3', 'spaces', 'wasabi', 'backblaze', 'oss'])) {
             return Storage::temporaryUrl($this->attributes['avatar'], now()->addDay());
         }
 

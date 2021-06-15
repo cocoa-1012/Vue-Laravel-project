@@ -172,6 +172,9 @@ export default {
 
             if (this.storage.driver === 'backblaze')
                 this.storage.endpoint = 'https://s3.' + val + '.backblazeb2.com'
+
+            if (this.storage.driver === 'oss')
+                this.storage.endpoint = 'https://' + val + '.aliyuncs.com'
         },
     },
     computed: {
@@ -188,6 +191,9 @@ export default {
                     break
                 case 'backblaze':
                     return this.backblazeRegions
+                    break
+                case 'oss':
+                    return this.ossRegions
                     break
             }
         },
@@ -247,6 +253,56 @@ export default {
                 {
                     label: 'Frankfurt',
                     value: 'fra1',
+                },
+            ],
+            ossRegions: [
+                {
+                    label: 'China (Hangzhou)',
+                    value: 'oss-cn-hangzhou',
+                },
+                {
+                    label: 'China (Shanghai)',
+                    value: 'oss-cn-shanghai',
+                },
+                {
+                    label: 'China (Qingdao)',
+                    value: 'oss-cn-qingdao',
+                },
+                {
+                    label: 'China (Beijing)',
+                    value: 'oss-cn-beijing',
+                },
+                {
+                    label: 'China (Zhangjiakou)',
+                    value: 'oss-cn-zhangjiakou',
+                },
+                {
+                    label: 'China (Hohhot)',
+                    value: 'oss-cn-huhehaote',
+                },
+                {
+                    label: 'China (Ulanqab)',
+                    value: 'oss-cn-wulanchabu',
+                },
+                {
+                    label: 'China (Shenzhen)',
+                    value: 'oss-cn-shenzhen',
+                },
+                {
+                    label: 'China (Heyuan)',
+                    value: 'oss-cn-heyuan',
+                },
+                {
+                    label: 'China (Guangzhou)',
+                    value: 'oss-cn-guangzhou',
+                },
+                {
+                    label: 'China (Chengdu)',
+                    value: 'oss-cn-chengdu',
+                },
+                {
+                    label: 'China (Hong Kong)',
+                    value: 'oss-cn-hongkong',
                 },
             ],
             s3Regions: [
@@ -351,6 +407,10 @@ export default {
                 {
                     label: 'Backblaze B2 Cloud Storage',
                     value: 'backblaze',
+                },
+                {
+                    label: 'Alibaba Cloud OSS',
+                    value: 'oss',
                 },
             ],
             encryptionList: [

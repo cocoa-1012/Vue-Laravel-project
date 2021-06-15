@@ -307,6 +307,18 @@ class SetupWizardController extends Controller
             ]);
         }
 
+        if ($storage_driver === 'oss') {
+
+            setEnvironmentValue([
+                'FILESYSTEM_DRIVER'     => $request->input('storage.driver'),
+                'OSS_ACCESS_KEY_ID'     => $request->input('storage.key'),
+                'OSS_SECRET_ACCESS_KEY' => $request->input('storage.secret'),
+                'OSS_ENDPOINT'          => $request->input('storage.endpoint'),
+                'OSS_REGION'            => $request->input('storage.region'),
+                'OSS_BUCKET'            => $request->input('storage.bucket'),
+            ]);
+        }
+
         setEnvironmentValue([
             'MAIL_DRIVER'     => $request->input('mail.driver'),
             'MAIL_HOST'       => $request->input('mail.host'),
@@ -397,7 +409,7 @@ class SetupWizardController extends Controller
         });
 
         setEnvironmentValue([
-            'APP_NAME'     => Str::camel($request->title),
+            'APP_NAME' => Str::camel($request->title),
         ]);
 
         return response('Done', 200);
