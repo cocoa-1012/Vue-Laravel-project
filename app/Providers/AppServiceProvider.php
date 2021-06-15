@@ -30,7 +30,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        $app_language = get_setting('language') ?? 'en';
+        try {
+            $app_language = get_setting('language') ?? 'en';
+        } catch (\PDOException $exception) {
+            $app_language = 'en';
+        }
 
         // Set locale for application
         app()->setLocale($app_language);
