@@ -14,8 +14,8 @@
                     <MenuItemList :navigation="ProfileNavigation" />
 
                     <!--SaaS menu-->
-                    <b class="mobile-menu-label">{{ $t('global.subscription') }}</b>
-                    <MenuItemList :navigation="SubscriptionNavigation" />
+                    <b v-if="config.isSaaS" class="mobile-menu-label">{{ $t('global.subscription') }}</b>
+                    <MenuItemList v-if="config.isSaaS" :navigation="SubscriptionNavigation" />
                 </nav>
             </div>
         </div>
@@ -25,12 +25,16 @@
 <script>
     import MenuItemList from '@/components/Mobile/MenuItemList'
     import MobileHeader from '@/components/Mobile/MobileHeader'
+    import { mapGetters } from 'vuex'
 
     export default {
         name: 'UserProfileMobileMenu',
         components: {
             MenuItemList,
             MobileHeader,
+        },
+        computed: {
+            ...mapGetters(['config']),
         },
         data() {
             return {

@@ -26,8 +26,9 @@ class UploadRequest extends FormRequest
     public function rules()
     {
         return [
+            'filename'  => 'required|string',
             'parent_id' => 'required|integer',
-            'file'      => ['required','file' ,  new MimetypeBlacklistValidation]
+            'file'      => ['required', 'file', new MimetypeBlacklistValidation]
         ];
     }
 }

@@ -500,7 +500,7 @@ class Editor
                 'type'       => get_file_type($file_mimetype),
                 'folder_id'  => $request->parent_id,
                 'metadata'   => $metadata,
-                'name'       => $user_file_name,
+                'name'       => $request->filename,
                 'unique_id'  => $unique_id,
                 'basename'   => $disk_file_name,
                 'user_scope' => $user_scope,

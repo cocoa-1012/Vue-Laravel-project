@@ -155,8 +155,9 @@ const Helpers = {
 			let formData = new FormData(),
 				uploadedSize = 0,
 				isNotGeneralError = true,
-				striped_name = item.file.name.replace(/^[A-Za-z0-9._~()'!*:@,;+?-]*$/g, ''),
-				filename = Array(16).fill(0).map(x => Math.random().toString(36).charAt(2)).join('') + '-' + striped_name + '.part'
+				striped_spaces = item.file.name.replace(/\s/g, '-'),
+				striped_to_safe_characters = striped_spaces.match(/^[A-Za-z0-9._~()'!*:@,;+?-\W]*$/g),
+				filename = Array(16).fill(0).map(x => Math.random().toString(36).charAt(2)).join('') + '-' + striped_to_safe_characters + '.part'
 
 			do {
 				let isLast = chunks.length === 1,
@@ -164,6 +165,7 @@ const Helpers = {
 					attempts = 0
 
 				// Set form data
+				formData.set('filename', item.file.name);
 				formData.set('file', chunk, filename);
 				formData.set('parent_id', item.parent_id)
 				formData.set('is_last', isLast);
