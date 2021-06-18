@@ -2,8 +2,8 @@
     <div class="mobile-toolbar">
 
         <!-- Go back-->
-        <div @click="goBack" class="go-back-button">
-            <chevron-left-icon size="17" :class="{'is-visible': browseHistory.length > 1}" class="icon-back"></chevron-left-icon>
+        <div @click="goBack" class="go-back-button" :class="{'is-visible': browseHistory.length > 1}">
+            <chevron-left-icon size="17" class="icon-back"></chevron-left-icon>
         </div>
 
         <!--Folder Title-->
@@ -106,18 +106,20 @@
         .go-back-button {
             text-align: left;
             flex: 1;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
 
             .icon-back {
                 vertical-align: middle;
                 cursor: pointer;
-                opacity: 0;
-                visibility: hidden;
                 margin-top: -2px;
+            }
 
-                &.is-visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
+            &.is-visible {
+                pointer-events: initial;
+                visibility: visible;
+                opacity: 1;
             }
         }
 
