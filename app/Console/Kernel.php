@@ -43,7 +43,7 @@ class Kernel extends ConsoleKernel
         })->everySixHours();
 
         // Run queue jobs every minute
-        $schedule->command('queue:work --tries=3')
+        $schedule->command('queue:work --stop-when-empty')
             ->everyMinute()
             ->withoutOverlapping();
     }
