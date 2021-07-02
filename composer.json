@@ -19,14 +19,15 @@
         "kyslik/column-sortable": "^6.4",
         "laravel/cashier": "^12.13",
         "laravel/framework": "^7.30.4",
-        "laravel/passport": "^8.5",
+        "laravel/passport": "8.5",
         "laravel/scout": "^7.2.1",
         "laravel/tinker": "^2.6.1",
         "laravel/ui": "^2.5",
         "league/flysystem-aws-s3-v3": "^1.0.29",
         "league/flysystem-cached-adapter": "^1.1",
         "madnest/madzipper": "^1.1",
-        "teamtnt/laravel-scout-tntsearch-driver": "^8.3"
+        "teamtnt/laravel-scout-tntsearch-driver": "^8.3",
+        "lcobucci/jwt": "3.3.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8.2",
