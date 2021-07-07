@@ -85,6 +85,37 @@ class FileManagerFile extends Model
         'created_at',
     ];
 
+    public function getNameAttribute() {
+        return utf8_encode($this->attributes['name']);
+    }
+
+    public function getBasenameAttribute() {
+        return utf8_encode($this->attributes['basename']);
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['created_at']), __t('time'))
+        );
+    }
+
+    public function getUpdatedAtAttribute()
+    {
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['updated_at']), __t('time'))
+        );
+    }
+
+    public function getDeletedAtAttribute()
+    {
+        if (!$this->attributes['deleted_at']) return null;
+
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['deleted_at']), __t('time'))
+        );
+    }
+
     /**
      * Set routes with public access
      *
@@ -93,28 +124,6 @@ class FileManagerFile extends Model
     public function setPublicUrl($token)
     {
         $this->public_access = $token;
-    }
-
-    /**
-     * Format created at date
-     *
-     * @return string
-     */
-    public function getCreatedAtAttribute()
-    {
-        return format_date(set_time_by_user_timezone($this->attributes['created_at']), __t('time'));
-    }
-
-    /**
-     * Form\a\t created at date reformat
-     *
-     * @return string
-     */
-    public function getDeletedAtAttribute()
-    {
-        if (!$this->attributes['deleted_at']) return null;
-
-        return format_date(set_time_by_user_timezone($this->attributes['deleted_at']), __t('time'));
     }
 
     /**

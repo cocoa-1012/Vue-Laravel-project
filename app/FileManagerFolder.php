@@ -2,13 +2,9 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
-use RecursiveArrayIterator;
-use RecursiveIteratorIterator;
 use TeamTNT\TNTSearch\Indexer\TNTIndexer;
 use \Illuminate\Database\Eloquent\SoftDeletes;
 use Kyslik\ColumnSortable\Sortable;
@@ -87,6 +83,33 @@ class FileManagerFolder extends Model
         'created_at',
     ];
 
+    public function getNameAttribute() {
+        return mb_convert_encoding($this->attributes['name'], 'UTF-8');
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['created_at']), __t('time'))
+        );
+    }
+
+    public function getUpdatedAtAttribute()
+    {
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['updated_at']), __t('time'))
+        );
+    }
+
+    public function getDeletedAtAttribute()
+    {
+        if (!$this->attributes['deleted_at']) return null;
+
+        return utf8_encode(
+            format_date(set_time_by_user_timezone($this->attributes['deleted_at']), __t('time'))
+        );
+    }
+
     /**
      * Index folder
      *
@@ -128,28 +151,6 @@ class FileManagerFolder extends Model
         $files = $this->trashed_files()->count();
 
         return $folders + $files;
-    }
-
-    /**
-     * Format created at date reformat
-     *
-     * @return string
-     */
-    public function getCreatedAtAttribute()
-    {
-        return format_date(set_time_by_user_timezone($this->attributes['created_at']), __t('time'));
-    }
-
-    /**
-     * Format created at date reformat
-     *
-     * @return string
-     */
-    public function getDeletedAtAttribute()
-    {
-        if (! $this->attributes['deleted_at']) return null;
-
-        return format_date(set_time_by_user_timezone($this->attributes['deleted_at']), __t('time'));
     }
 
     /**
