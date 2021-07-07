@@ -84,7 +84,7 @@ class FileManagerFolder extends Model
     ];
 
     public function getNameAttribute() {
-        return mb_convert_encoding($this->attributes['name'], 'UTF-8');
+        return utf8_encode($this->attributes['name']);
     }
 
     public function getCreatedAtAttribute()

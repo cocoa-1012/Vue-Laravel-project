@@ -649,7 +649,7 @@ function get_image_meta_data($file)
         try {
 
             // Try to get the exif data
-            return mb_convert_encoding(Image::make($file->getRealPath())->exif(),'UTF8', 'UTF8');
+            return mb_convert_encoding(Image::make($file->getRealPath())->exif(),'UTF8');
 
         } catch ( \Exception $e) {
             
