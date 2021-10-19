@@ -1,1 +1,1021 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{"+Pqb":function(e,t,a){"use strict";var i={name:"ProgressBar",props:["progress"]},r=(a("woIv"),a("KHd+")),o=Object(r.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"progress-bar"},[t("span",{style:{width:this.progress+"%"}})])}),[],!1,null,"f372b280",null);t.a=o.exports},"+fJw":function(e,t,a){var i=a("R+OL");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},"+t0u":function(e,t,a){var i=a("QO4y");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},"13Td":function(e,t,a){"use strict";var i={name:"SetupBox",props:["title","description","theme"]},r=(a("jS71"),a("KHd+")),o=Object(r.a)(i,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",{staticClass:"setup-box",class:e.theme},[a("b",{staticClass:"title"},[e._v(e._s(e.title))]),e._v(" "),a("p",{staticClass:"description"},[e._v(e._s(e.description))]),e._v(" "),e._t("default")],2)}),[],!1,null,"664a78dc",null);t.a=o.exports},"5pbA":function(e,t,a){"use strict";a("+t0u")},"D+dh":function(e,t,a){"use strict";var i=a("CjXH"),r={name:"ImageInput",props:["image","error"],components:{ImageIcon:i.C,XIcon:i.gb},data:function(){return{imagePreview:void 0}},computed:{isData:function(){return void 0!==this.imagePreview&&""!==this.imagePreview}},methods:{resetImage:function(){this.imagePreview=void 0,this.$emit("input",void 0)},showImagePreview:function(e){var t=this,a=e.target.files[0].name,i=a.substring(a.lastIndexOf(".")+1).toLowerCase();if(["png","jpg","jpeg","svg"].includes(i)){var r=e.target.files[0],o=new FileReader;o.onload=function(){return t.imagePreview=o.result},o.readAsDataURL(r),this.$emit("input",e.target.files[0])}else alert(this.$t("validation_errors.wrong_image"))}},created:function(){this.image&&(this.imagePreview=this.image)}},o=(a("w9z4"),a("KHd+")),s=Object(o.a)(r,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",{staticClass:"dropzone",class:{"is-error":e.error}},[e.imagePreview?a("div",{staticClass:"reset-image",on:{click:e.resetImage}},[a("x-icon",{staticClass:"close-icon",attrs:{size:"14"}})],1):e._e(),e._v(" "),a("input",{ref:"file",staticClass:"dummy",attrs:{type:"file"},on:{change:function(t){return e.showImagePreview(t)}}}),e._v(" "),e.imagePreview?a("img",{ref:"image",staticClass:"image-preview",attrs:{src:e.imagePreview}}):e._e(),e._v(" "),a("div",{directives:[{name:"show",rawName:"v-show",value:!e.isData,expression:"! isData"}],staticClass:"dropzone-message"},[a("image-icon",{staticClass:"icon-upload",attrs:{size:"28"}}),e._v(" "),a("span",{staticClass:"dropzone-title"},[e._v("\n            "+e._s(e.$t("input_image.title"))+"\n        ")]),e._v(" "),a("span",{staticClass:"dropzone-description"},[e._v("\n            "+e._s(e.$t("input_image.supported"))+"\n        ")])],1)])}),[],!1,null,"eb0cae00",null);t.a=s.exports},"F12+":function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".progress-bar[data-v-f372b280]{width:100%;height:5px;background:#f4f5f6;margin-top:6px;border-radius:10px}.progress-bar span[data-v-f372b280]{background:#00bc7e;display:block;height:100%;border-radius:10px;max-width:100%}@media (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}@media only screen and (min-width:680px) and (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}",""])},FEcZ:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".setup-box[data-v-664a78dc]{padding:20px;border-radius:8px;margin-bottom:30px}.setup-box .title[data-v-664a78dc]{font-size:1.3125em;margin-bottom:5px;display:block;font-weight:700}.setup-box .description[data-v-664a78dc]{font-size:.9375em;line-height:1.5;margin-bottom:20px}.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#f4f5f6}.setup-box.danger .title[data-v-664a78dc]{color:#fd397a}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#fff}.setup-box[data-v-664a78dc] .form{margin-top:20px}.setup-box[data-v-664a78dc] .form.block-form{max-width:450px}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:flex}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:20px}@media only screen and (max-width:960px){.setup-box[data-v-664a78dc] .form.block-form{max-width:100%}.setup-box[data-v-664a78dc] .form input{min-width:0}}@media only screen and (max-width:690px){.setup-box[data-v-664a78dc]{padding:15px}.setup-box .title[data-v-664a78dc]{font-size:1.0625em;margin-bottom:10px}.setup-box .description[data-v-664a78dc]{font-size:.875em}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:block}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:0;margin-top:10px}}@media (prefers-color-scheme:dark){.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#1e2024}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#131414}}",""])},IS7u:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".dropzone[data-v-eb0cae00]{border:1px dashed #a1abc2;border-radius:8px;position:relative;text-align:center;display:flex;align-items:center;min-height:175px}.dropzone.is-error[data-v-eb0cae00]{border:2px dashed rgba(253,57,122,.3)}.dropzone.is-error .dropzone-title[data-v-eb0cae00]{color:#fd397a}.dropzone.is-error .icon-upload circle[data-v-eb0cae00],.dropzone.is-error .icon-upload polyline[data-v-eb0cae00],.dropzone.is-error .icon-upload rect[data-v-eb0cae00]{stroke:#fd397a}.dropzone input[type=file][data-v-eb0cae00]{opacity:0;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;width:100%;cursor:pointer}.dropzone .image-preview[data-v-eb0cae00]{position:absolute;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;left:0;padding:25px;display:block}.dropzone .image-preview.fit-image[data-v-eb0cae00]{-o-object-fit:cover;object-fit:cover;border-radius:12px;overflow:hidden}.dropzone .dropzone-message[data-v-eb0cae00]{padding:50px 0;width:100%}.dropzone .dropzone-message .icon-upload circle[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload polyline[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload rect[data-v-eb0cae00]{stroke:#00bc7e}.dropzone .dropzone-message .dropzone-title[data-v-eb0cae00]{font-size:1em;font-weight:700;display:block}.dropzone .dropzone-message .dropzone-description[data-v-eb0cae00]{color:rgba(27,37,57,.7);font-size:.75em}.dropzone .reset-image[data-v-eb0cae00]{z-index:2;background:#fff;border-radius:50px;display:block;position:absolute;right:0;top:0;cursor:pointer;transform:translateY(-50%) translateX(50%);padding:0 4px;box-shadow:0 1px 5px rgba(0,0,0,.12)}.dropzone .reset-image .close-icon[data-v-eb0cae00]{vertical-align:middle}.dropzone .reset-image .close-icon line path[data-v-eb0cae00]{fill:#1b2539}@media (prefers-color-scheme:dark){.dropzone[data-v-eb0cae00]{border-color:hsla(0,0%,100%,.2)}.dropzone .dropzone-message .icon-upload line[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload path[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload polyline[data-v-eb0cae00]{stroke:#00bc7e}.dropzone .dropzone-message .dropzone-description[data-v-eb0cae00]{color:#7d858c}}",""])},Idvm:function(e,t,a){var i=a("lig4");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},LE5O:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".detail-storage-item[data-v-56af1b6e]{margin-bottom:35px}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span{background:#1b2539}.detail-storage-item.images .icon circle[data-v-56af1b6e],.detail-storage-item.images .icon line[data-v-56af1b6e],.detail-storage-item.images .icon path[data-v-56af1b6e],.detail-storage-item.images .icon polygon[data-v-56af1b6e],.detail-storage-item.images .icon polyline[data-v-56af1b6e],.detail-storage-item.images .icon rect[data-v-56af1b6e]{stroke:#9d66fe}.detail-storage-item.images .storage-progress[data-v-56af1b6e] span{background:#9d66fe}.detail-storage-item.videos .icon circle[data-v-56af1b6e],.detail-storage-item.videos .icon line[data-v-56af1b6e],.detail-storage-item.videos .icon path[data-v-56af1b6e],.detail-storage-item.videos .icon polygon[data-v-56af1b6e],.detail-storage-item.videos .icon polyline[data-v-56af1b6e],.detail-storage-item.videos .icon rect[data-v-56af1b6e]{stroke:#ffbd2d}.detail-storage-item.videos .storage-progress[data-v-56af1b6e] span{background:#ffbd2d}.detail-storage-item.audios .icon circle[data-v-56af1b6e],.detail-storage-item.audios .icon line[data-v-56af1b6e],.detail-storage-item.audios .icon path[data-v-56af1b6e],.detail-storage-item.audios .icon polygon[data-v-56af1b6e],.detail-storage-item.audios .icon polyline[data-v-56af1b6e],.detail-storage-item.audios .icon rect[data-v-56af1b6e]{stroke:#fe66a1}.detail-storage-item.audios .storage-progress[data-v-56af1b6e] span{background:#fe66a1}.detail-storage-item.documents .icon circle[data-v-56af1b6e],.detail-storage-item.documents .icon line[data-v-56af1b6e],.detail-storage-item.documents .icon path[data-v-56af1b6e],.detail-storage-item.documents .icon polygon[data-v-56af1b6e],.detail-storage-item.documents .icon polyline[data-v-56af1b6e],.detail-storage-item.documents .icon rect[data-v-56af1b6e]{stroke:#fe6057}.detail-storage-item.documents .storage-progress[data-v-56af1b6e] span{background:#fe6057}.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#1b2539}.header-storage-item[data-v-56af1b6e]{display:flex;align-items:flex-start;margin-bottom:10px}.header-storage-item .icon[data-v-56af1b6e]{width:35px}.header-storage-item .type[data-v-56af1b6e]{font-size:.9375em;color:#1b2539}.header-storage-item .total-size[data-v-56af1b6e]{font-size:.625em;display:block;color:rgba(27,37,57,.7)}@media (prefers-color-scheme:dark){.header-storage-item .type[data-v-56af1b6e]{color:#bec6cf}.header-storage-item .total-size[data-v-56af1b6e]{color:#7d858c}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e],.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#41454e}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span,.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#41454e}}",""])},QO4y:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,"",""])},"R+OL":function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".form[data-v-5317e942]{max-width:700px}.form.inline-form[data-v-5317e942]{display:flex;position:relative;justify-content:center;margin:0 auto}.form.inline-form .input-wrapper[data-v-5317e942]{position:relative}.form.inline-form .input-wrapper .error-message[data-v-5317e942]{position:absolute;left:0;bottom:-25px}.form.block-form .wrapper-inline[data-v-5317e942]{display:flex;margin:0 -15px}.form.block-form .wrapper-inline .block-wrapper[data-v-5317e942]{width:100%;padding:0 15px}.form.block-form .block-wrapper[data-v-5317e942]{margin-bottom:32px}.form.block-form .block-wrapper label[data-v-5317e942]{font-size:.875em;color:rgba(27,37,57,.8);font-weight:700;display:block;margin-bottom:7px;text-align:left}.form.block-form .block-wrapper[data-v-5317e942]:last-child{margin-bottom:0}.form.block-form .button[data-v-5317e942]{margin-top:50px}.form .inline-wrapper[data-v-5317e942]{display:flex;align-items:center;justify-content:space-between}.form .inline-wrapper .switch-label .input-help[data-v-5317e942]{padding-top:0}.form .inline-wrapper .switch-label .input-label[data-v-5317e942]{font-weight:700;color:#1b2539;font-size:1em;margin-bottom:5px}.form .input-help[data-v-5317e942]{font-size:.75em;color:rgba(27,37,57,.7);line-height:1.35;padding-top:10px;display:block}.single-line-form[data-v-5317e942]{display:flex}.single-line-form .submit-button[data-v-5317e942]{margin-left:20px}.error-message[data-v-5317e942]{font-size:.875em;color:#fd397a;padding-top:5px;display:block;text-align:left}textarea[data-v-5317e942]{width:100%}input[type=email][data-v-5317e942],input[type=number][data-v-5317e942],input[type=password][data-v-5317e942],input[type=text][data-v-5317e942],textarea[data-v-5317e942]{border:1px solid transparent;transition:all .15s ease;font-size:1em;border-radius:8px;padding:13px 20px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-weight:700;outline:0;width:100%;box-shadow:0 1px 5px rgba(0,0,0,.12)}input[type=email].is-error[data-v-5317e942],input[type=number].is-error[data-v-5317e942],input[type=password].is-error[data-v-5317e942],input[type=text].is-error[data-v-5317e942],textarea.is-error[data-v-5317e942]{border-color:#fd397a;box-shadow:0 1px 5px rgba(253,57,122,.3)}input[type=email][data-v-5317e942]::-moz-placeholder,input[type=number][data-v-5317e942]::-moz-placeholder,input[type=password][data-v-5317e942]::-moz-placeholder,input[type=text][data-v-5317e942]::-moz-placeholder,textarea[data-v-5317e942]::-moz-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-5317e942]:-ms-input-placeholder,input[type=number][data-v-5317e942]:-ms-input-placeholder,input[type=password][data-v-5317e942]:-ms-input-placeholder,input[type=text][data-v-5317e942]:-ms-input-placeholder,textarea[data-v-5317e942]:-ms-input-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-5317e942]::placeholder,input[type=number][data-v-5317e942]::placeholder,input[type=password][data-v-5317e942]::placeholder,input[type=text][data-v-5317e942]::placeholder,textarea[data-v-5317e942]::placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-5317e942]:focus,input[type=number][data-v-5317e942]:focus,input[type=password][data-v-5317e942]:focus,input[type=text][data-v-5317e942]:focus,textarea[data-v-5317e942]:focus{border-color:#00bc7e;box-shadow:0 1px 5px rgba(0,188,126,.3)}input[type=email][disabled][data-v-5317e942],input[type=number][disabled][data-v-5317e942],input[type=password][disabled][data-v-5317e942],input[type=text][disabled][data-v-5317e942],textarea[disabled][data-v-5317e942]{background:#fff;color:rgba(27,37,57,.8);-webkit-text-fill-color:rgba(27,37,57,.8);opacity:1;cursor:not-allowed}.additional-link[data-v-5317e942]{font-size:1em;margin-top:50px;display:block;color:#1b2539}.additional-link a[data-v-5317e942],.additional-link b[data-v-5317e942]{color:#00bc7e;cursor:pointer}.additional-link a[data-v-5317e942]:hover,.additional-link b[data-v-5317e942]:hover{text-decoration:underline}@media only screen and (max-width:1024px){.form[data-v-5317e942]{max-width:100%}}@media only screen and (max-width:960px){.form .button[data-v-5317e942]{margin-top:20px;width:100%;margin-left:0;margin-right:0}.form input[data-v-5317e942],.form textarea[data-v-5317e942]{width:100%;min-width:100%}.form.block-form .block-wrapper[data-v-5317e942]{display:block}.form.block-form .block-wrapper label[data-v-5317e942]{width:100%;padding-right:0;display:block;margin-bottom:7px;text-align:left!important;font-size:.875em;padding-top:0}.form.block-form .button[data-v-5317e942]{margin-top:25px;margin-left:0;margin-right:0}.form.inline-form[data-v-5317e942]{display:block}.form.inline-form .input-wrapper .error-message[data-v-5317e942]{position:relative;bottom:0}.form .button[data-v-5317e942]{padding:14px 32px}.single-line-form[data-v-5317e942]{display:block}.single-line-form .submit-button[data-v-5317e942]{margin-left:0;margin-top:20px;width:100%}input[type=email][data-v-5317e942],input[type=number][data-v-5317e942],input[type=password][data-v-5317e942],input[type=text][data-v-5317e942],textarea[data-v-5317e942]{padding:14px 20px}}@media only screen and (max-width:690px){.form.block-form .wrapper-inline[data-v-5317e942]{display:block}}@media (prefers-color-scheme:dark){.form .input-help[data-v-5317e942]{color:#7d858c}.form.block-form .block-wrapper label[data-v-5317e942],.form .inline-wrapper .switch-label .input-label[data-v-5317e942]{color:#bec6cf}input[type=email][data-v-5317e942],input[type=number][data-v-5317e942],input[type=password][data-v-5317e942],input[type=text][data-v-5317e942],textarea[data-v-5317e942]{border-color:#1e2024;background:#1e2024;color:#bec6cf}input[type=email][data-v-5317e942]::-moz-placeholder,input[type=number][data-v-5317e942]::-moz-placeholder,input[type=password][data-v-5317e942]::-moz-placeholder,input[type=text][data-v-5317e942]::-moz-placeholder,textarea[data-v-5317e942]::-moz-placeholder{color:#7d858c}input[type=email][data-v-5317e942]:-ms-input-placeholder,input[type=number][data-v-5317e942]:-ms-input-placeholder,input[type=password][data-v-5317e942]:-ms-input-placeholder,input[type=text][data-v-5317e942]:-ms-input-placeholder,textarea[data-v-5317e942]:-ms-input-placeholder{color:#7d858c}input[type=email][data-v-5317e942]::placeholder,input[type=number][data-v-5317e942]::placeholder,input[type=password][data-v-5317e942]::placeholder,input[type=text][data-v-5317e942]::placeholder,textarea[data-v-5317e942]::placeholder{color:#7d858c}input[type=email][disabled][data-v-5317e942],input[type=number][disabled][data-v-5317e942],input[type=password][disabled][data-v-5317e942],input[type=text][disabled][data-v-5317e942],textarea[disabled][data-v-5317e942]{background:#1e2024;color:rgba(125,133,140,.8);-webkit-text-fill-color:rgba(125,133,140,.8)}}.block-form[data-v-5317e942]{max-width:100%}",""])},RNzz:function(e,t,a){"use strict";a.r(t);var i=a("o0o1"),r=a.n(i),o=a("A5+z"),s=a("xnZf"),n=a("gahf"),d=a("4TWA"),p=a("xxrA"),l=a("D+dh"),c=a("eZ9V"),m=a("Nv84"),u=a("13Td"),v=a("qefO"),b=a("KnjL"),f=a("TJPC"),g=a("L2JU"),h=a("xCqy"),y=a("vDqi"),x=a.n(y);function _(e,t,a,i,r,o,s){try{var n=e[o](s),d=n.value}catch(e){return void a(e)}n.done?t(d):Promise.resolve(d).then(i,r)}function w(e,t){var a=Object.keys(e);if(Object.getOwnPropertySymbols){var i=Object.getOwnPropertySymbols(e);t&&(i=i.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),a.push.apply(a,i)}return a}function k(e){for(var t=1;t<arguments.length;t++){var a=null!=arguments[t]?arguments[t]:{};t%2?w(Object(a),!0).forEach((function(t){z(e,t,a[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(a)):w(Object(a)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(a,t))}))}return e}function z(e,t,a){return t in e?Object.defineProperty(e,t,{value:a,enumerable:!0,configurable:!0,writable:!0}):e[t]=a,e}var C={name:"AppPayments",components:{ValidationObserver:o.ValidationObserver,ValidationProvider:o.ValidationProvider,StorageItemDetail:s.a,PageTabGroup:n.a,SwitchInput:p.a,SelectInput:d.a,ImageInput:l.a,ButtonBase:m.a,FormLabel:c.a,SetupBox:u.a,required:f.a,PageTab:v.a,InfoBox:b.a},computed:k(k({},Object(g.b)(["config","currencyList"])),{},{stripeWebhookEndpoint:function(){return this.config.host+"/stripe/webhook"},submitButtonText:function(){return this.isLoading?this.$t("admin_settings.payments.button_testing"):this.$t("admin_settings.payments.button_submit")}}),data:function(){return{isLoading:!0,isError:!1,errorMessage:"",payments:void 0,stripeCredentials:{key:"",secret:"",webhookSecret:"",currency:""}}},methods:{stripeCredentialsSubmit:function(){var e,t=this;return(e=r.a.mark((function e(){return r.a.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.$refs.stripeCredentials.validate();case 2:if(e.sent){e.next=5;break}return e.abrupt("return");case 5:t.isLoading=!0,x.a.post("/api/settings/stripe",t.stripeCredentials).then((function(){t.$store.commit("SET_STRIPE_PUBLIC_KEY",t.stripeCredentials.key),h.a.$emit("toaster",{type:"success",message:t.$t("toaster.stripe_set")})})).catch((function(e){(e.response.status=401)&&(t.isError=!0,t.errorMessage=e.response.data.message)})).finally((function(){t.isLoading=!1}));case 7:case"end":return e.stop()}}),e)})),function(){var t=this,a=arguments;return new Promise((function(i,r){var o=e.apply(t,a);function s(e){_(o,i,r,s,n,"next",e)}function n(e){_(o,i,r,s,n,"throw",e)}s(void 0)}))})()}},mounted:function(){var e=this;x.a.get("/api/settings",{params:{column:"payments_active|payments_configured"}}).then((function(t){e.isLoading=!1,e.payments={configured:parseInt(t.data.payments_configured),status:parseInt(t.data.payments_active)}}))}},I=(a("jjMQ"),a("KHd+")),P=Object(I.a)(C,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("PageTab",{staticClass:"form-fixed-width",attrs:{"is-loading":e.isLoading}},[e.config.stripe_public_key&&e.payments?a("PageTabGroup",[a("div",{staticClass:"form block-form"},[a("FormLabel",[e._v(e._s(e.$t("admin_settings.payments.section_payments")))]),e._v(" "),a("InfoBox",[a("p",{domProps:{innerHTML:e._s(e.$t("admin_settings.payments.credentials_disclaimer"))}})]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("div",{staticClass:"input-wrapper"},[a("div",{staticClass:"inline-wrapper"},[a("div",{staticClass:"switch-label"},[a("label",{staticClass:"input-label"},[e._v(e._s(e.$t("admin_settings.payments.allow_payments"))+":")])]),e._v(" "),a("SwitchInput",{staticClass:"switch",attrs:{state:e.payments.status},on:{input:function(t){return e.$updateText("/settings","payments_active",e.payments.status)}},model:{value:e.payments.status,callback:function(t){e.$set(e.payments,"status",t)},expression:"payments.status"}})],1)])]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.payments.webhook_url"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Webhook URL",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{attrs:{type:"text",disabled:""},domProps:{value:e.stripeWebhookEndpoint}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,2791309690)})],1)],1)]):e._e(),e._v(" "),e.config.stripe_public_key?e._e():a("PageTabGroup",[a("ValidationObserver",{ref:"stripeCredentials",staticClass:"form block-form",attrs:{tag:"form"},on:{submit:function(t){return t.preventDefault(),e.stripeCredentialsSubmit.apply(null,arguments)}},scopedSlots:e._u([{key:"default",fn:function(t){t.invalid;return[a("FormLabel",[e._v(e._s(e.$t("admin_settings.payments.stripe_setup")))]),e._v(" "),a("InfoBox",[a("p",{domProps:{innerHTML:e._s(e.$t("admin_settings.payments.stripe_create_acc"))}})]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.payments.stripe_currency"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Currency",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("SelectInput",{attrs:{options:e.currencyList,placeholder:e.$t("admin_settings.payments.stripe_currency_plac"),isError:i[0]},model:{value:e.stripeCredentials.currency,callback:function(t){e.$set(e.stripeCredentials,"currency",t)},expression:"stripeCredentials.currency"}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!0)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.payments.stripe_pub_key"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Publishable Key",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.stripeCredentials.key,expression:"stripeCredentials.key"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.payments.stripe_pub_key_plac"),type:"text"},domProps:{value:e.stripeCredentials.key},on:{input:function(t){t.target.composing||e.$set(e.stripeCredentials,"key",t.target.value)}}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!0)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.payments.stripe_sec_key"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Secret Key",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.stripeCredentials.secret,expression:"stripeCredentials.secret"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.payments.stripe_sec_key_plac"),type:"text"},domProps:{value:e.stripeCredentials.secret},on:{input:function(t){t.target.composing||e.$set(e.stripeCredentials,"secret",t.target.value)}}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!0)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v("Webhook URL:")]),e._v(" "),a("InfoBox",[a("p",{domProps:{innerHTML:e._s(e.$t("admin_settings.payments.stripe_create_webhook"))}})]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Webhook URL",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{attrs:{type:"text",disabled:""},domProps:{value:e.stripeWebhookEndpoint}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!0)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v("Webhook Secret:")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Webhook Secret",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.stripeCredentials.webhookSecret,expression:"stripeCredentials.webhookSecret"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.payments.stripe_webhook_key_plac"),type:"text"},domProps:{value:e.stripeCredentials.webhookSecret},on:{input:function(t){t.target.composing||e.$set(e.stripeCredentials,"webhookSecret",t.target.value)}}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!0)})],1),e._v(" "),e.isError?a("InfoBox",{attrs:{type:"error"}},[a("p",[e._v(e._s(e.errorMessage))])]):e._e(),e._v(" "),a("ButtonBase",{staticClass:"submit-button",attrs:{loading:e.isLoading,disabled:e.isLoading,type:"submit","button-style":"theme"}},[e._v("\n                "+e._s(e.submitButtonText)+"\n            ")])]}}],null,!1,2483202031)})],1)],1)}),[],!1,null,"5317e942",null);t.default=P.exports},VA79:function(e,t,a){var i=a("F12+");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},Xk6H:function(e,t,a){"use strict";a("Idvm")},b0xl:function(e,t,a){"use strict";a("oyp5")},"bN/l":function(e,t,a){var i=a("IS7u");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},eZ9V:function(e,t,a){"use strict";var i={name:"FormLabel",components:{Edit2Icon:a("CjXH").q}},r=(a("Xk6H"),a("KHd+")),o=Object(r.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"form-label"},[t("edit-2-icon",{staticClass:"icon",attrs:{size:"22"}}),this._v(" "),t("b",{staticClass:"label"},[this._t("default")],2)],1)}),[],!1,null,"c1157a8e",null);t.a=o.exports},gahf:function(e,t,a){"use strict";var i={name:"PageTabGroup"},r=(a("yI2c"),a("KHd+")),o=Object(r.a)(i,(function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"page-tab-group"},[this._t("default")],2)}),[],!1,null,"1bb470e4",null);t.a=o.exports},jS71:function(e,t,a){"use strict";a("wsaA")},jjMQ:function(e,t,a){"use strict";a("+fJw")},lig4:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".form-label[data-v-c1157a8e]{display:flex;align-items:center;margin-bottom:30px}.form-label .icon[data-v-c1157a8e]{margin-right:10px}.form-label .icon path[data-v-c1157a8e]{stroke:#00bc7e}.form-label .label[data-v-c1157a8e]{font-size:1.125em;font-weight:700}@media (prefers-color-scheme:dark){.form-label .label[data-v-c1157a8e]{color:#bec6cf}}",""])},oDxr:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".page-tab-group[data-v-1bb470e4]{margin-bottom:65px}",""])},oyp5:function(e,t,a){var i=a("LE5O");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},qefO:function(e,t,a){"use strict";var i={name:"PageTab",props:["isLoading"],components:{Spinner:a("zTYo").a}},r=(a("5pbA"),a("KHd+")),o=Object(r.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"page-tab"},[t("div",{directives:[{name:"show",rawName:"v-show",value:this.isLoading,expression:"isLoading"}],attrs:{id:"loader"}},[t("Spinner")],1),this._v(" "),this._t("default")],2)}),[],!1,null,"4339da66",null);t.a=o.exports},w9z4:function(e,t,a){"use strict";a("bN/l")},woIv:function(e,t,a){"use strict";a("VA79")},wsaA:function(e,t,a){var i=a("FEcZ");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)},xnZf:function(e,t,a){"use strict";var i=a("+Pqb"),r=a("CjXH"),o={name:"StorageItemDetail",props:["percentage","title","type","used"],components:{HardDriveIcon:r.A,FileTextIcon:r.v,ProgressBar:i.a,MusicIcon:r.M,VideoIcon:r.fb,ImageIcon:r.C,FileIcon:r.u}},s=(a("b0xl"),a("KHd+")),n=Object(s.a)(o,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("article",{staticClass:"detail-storage-item",class:e.type},[a("div",{staticClass:"header-storage-item"},[a("div",{staticClass:"icon"},["images"==e.type?a("image-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"videos"==e.type?a("video-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"audios"==e.type?a("music-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"documents"==e.type?a("file-text-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"others"==e.type?a("file-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"disk"==e.type?a("hard-drive-icon",{attrs:{size:"23"}}):e._e()],1),e._v(" "),a("div",{staticClass:"title"},[a("b",{staticClass:"type"},[e._v(e._s(e.title))]),e._v(" "),a("span",{staticClass:"total-size"},[e._v(e._s(e.used))])])]),e._v(" "),a("ProgressBar",{staticClass:"storage-progress",attrs:{progress:e.percentage}})],1)}),[],!1,null,"56af1b6e",null);t.a=n.exports},yI2c:function(e,t,a){"use strict";a("zlQ3")},zlQ3:function(e,t,a){var i=a("oDxr");"string"==typeof i&&(i=[[e.i,i,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,r);i.locals&&(e.exports=i.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunks/app-payments"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vee-validate/dist/vee-validate.full */ "./node_modules/vee-validate/dist/vee-validate.full.js");
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Others/StorageItemDetail */ "./resources/js/components/Others/StorageItemDetail.vue");
+/* harmony import */ var _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Others/Layout/PageTabGroup */ "./resources/js/components/Others/Layout/PageTabGroup.vue");
+/* harmony import */ var _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Others/Forms/SelectInput */ "./resources/js/components/Others/Forms/SelectInput.vue");
+/* harmony import */ var _components_Others_Forms_SwitchInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/Others/Forms/SwitchInput */ "./resources/js/components/Others/Forms/SwitchInput.vue");
+/* harmony import */ var _components_Others_Forms_ImageInput__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/Others/Forms/ImageInput */ "./resources/js/components/Others/Forms/ImageInput.vue");
+/* harmony import */ var _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/components/Others/Forms/FormLabel */ "./resources/js/components/Others/Forms/FormLabel.vue");
+/* harmony import */ var _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/components/FilesView/ButtonBase */ "./resources/js/components/FilesView/ButtonBase.vue");
+/* harmony import */ var _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/components/Others/Forms/SetupBox */ "./resources/js/components/Others/Forms/SetupBox.vue");
+/* harmony import */ var _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/components/Others/Layout/PageTab */ "./resources/js/components/Others/Layout/PageTab.vue");
+/* harmony import */ var _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/components/Others/Forms/InfoBox */ "./resources/js/components/Others/Forms/InfoBox.vue");
+/* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _bus__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/bus */ "./resources/js/bus.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_15__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AppPayments',
+  components: {
+    ValidationObserver: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_1__["ValidationObserver"],
+    ValidationProvider: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_1__["ValidationProvider"],
+    StorageItemDetail: _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_2__["default"],
+    PageTabGroup: _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_3__["default"],
+    SwitchInput: _components_Others_Forms_SwitchInput__WEBPACK_IMPORTED_MODULE_5__["default"],
+    SelectInput: _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ImageInput: _components_Others_Forms_ImageInput__WEBPACK_IMPORTED_MODULE_6__["default"],
+    ButtonBase: _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_8__["default"],
+    FormLabel: _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_7__["default"],
+    SetupBox: _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_9__["default"],
+    required: vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_12__["required"],
+    PageTab: _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_10__["default"],
+    InfoBox: _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_11__["default"]
+  },
+  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_13__["mapGetters"])(['config', 'currencyList'])), {}, {
+    stripeWebhookEndpoint: function stripeWebhookEndpoint() {
+      return this.config.host + '/stripe/webhook';
+    },
+    submitButtonText: function submitButtonText() {
+      return this.isLoading ? this.$t('admin_settings.payments.button_testing') : this.$t('admin_settings.payments.button_submit');
+    }
+  }),
+  data: function data() {
+    return {
+      isLoading: true,
+      isError: false,
+      errorMessage: '',
+      payments: undefined,
+      stripeCredentials: {
+        key: '',
+        secret: '',
+        webhookSecret: '',
+        currency: ''
+      }
+    };
+  },
+  methods: {
+    stripeCredentialsSubmit: function stripeCredentialsSubmit() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var isValid;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.$refs.stripeCredentials.validate();
+
+              case 2:
+                isValid = _context.sent;
+
+                if (isValid) {
+                  _context.next = 5;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 5:
+                // Start loading
+                _this.isLoading = true; // Send request to get verify account
+
+                axios__WEBPACK_IMPORTED_MODULE_15___default.a.post('/api/settings/stripe', _this.stripeCredentials).then(function () {
+                  // Store Stripe Public
+                  _this.$store.commit('SET_STRIPE_PUBLIC_KEY', _this.stripeCredentials.key); // Show toaster
+
+
+                  _bus__WEBPACK_IMPORTED_MODULE_14__["events"].$emit('toaster', {
+                    type: 'success',
+                    message: _this.$t('toaster.stripe_set')
+                  });
+                })["catch"](function (error) {
+                  if (error.response.status = 401) {
+                    _this.isError = true;
+                    _this.errorMessage = error.response.data.message;
+                  }
+                })["finally"](function () {
+                  // End loading
+                  _this.isLoading = false;
+                });
+
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_15___default.a.get('/api/settings', {
+      params: {
+        column: 'payments_active|payments_configured'
+      }
+    }).then(function (response) {
+      _this2.isLoading = false;
+      _this2.payments = {
+        configured: parseInt(response.data.payments_configured),
+        status: parseInt(response.data.payments_active)
+      };
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".form[data-v-f471be38] {\n  max-width: 700px;\n}\n.form.inline-form[data-v-f471be38] {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  margin: 0 auto;\n}\n.form.inline-form .input-wrapper[data-v-f471be38] {\n  position: relative;\n}\n.form.inline-form .input-wrapper .error-message[data-v-f471be38] {\n  position: absolute;\n  left: 0;\n  bottom: -25px;\n}\n.form.block-form .wrapper-inline[data-v-f471be38] {\n  display: flex;\n  margin: 0 -15px;\n}\n.form.block-form .wrapper-inline .block-wrapper[data-v-f471be38] {\n  width: 100%;\n  padding: 0 15px;\n}\n.form.block-form .block-wrapper[data-v-f471be38] {\n  margin-bottom: 32px;\n}\n.form.block-form .block-wrapper label[data-v-f471be38] {\n  font-size: 0.875em;\n  color: rgba(27, 37, 57, 0.8);\n  font-weight: 700;\n  display: block;\n  margin-bottom: 7px;\n  text-align: left;\n}\n.form.block-form .block-wrapper[data-v-f471be38]:last-child {\n  margin-bottom: 0;\n}\n.form.block-form .button[data-v-f471be38] {\n  margin-top: 50px;\n}\n.form .inline-wrapper[data-v-f471be38] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.form .inline-wrapper .switch-label .input-help[data-v-f471be38] {\n  padding-top: 0;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-f471be38] {\n  font-weight: 700;\n  color: #1B2539;\n  font-size: 1em;\n  margin-bottom: 5px;\n}\n.form .input-help[data-v-f471be38] {\n  font-size: 0.75em;\n  color: rgba(27, 37, 57, 0.7);\n  line-height: 1.35;\n  padding-top: 10px;\n  display: block;\n}\n.single-line-form[data-v-f471be38] {\n  display: flex;\n}\n.single-line-form .submit-button[data-v-f471be38] {\n  margin-left: 20px;\n}\n.error-message[data-v-f471be38] {\n  font-size: 0.875em;\n  color: #fd397a;\n  padding-top: 5px;\n  display: block;\n  text-align: left;\n}\ntextarea[data-v-f471be38] {\n  width: 100%;\n}\ntextarea[data-v-f471be38],\ninput[type=\"password\"][data-v-f471be38],\ninput[type=\"text\"][data-v-f471be38],\ninput[type=\"number\"][data-v-f471be38],\ninput[type=\"email\"][data-v-f471be38] {\n  border: 1px solid transparent;\n  transition: 150ms all ease;\n  font-size: 1em;\n  border-radius: 8px;\n  padding: 13px 20px;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  font-weight: 700;\n  outline: 0;\n  width: 100%;\n  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);\n}\ntextarea.is-error[data-v-f471be38],\ninput[type=\"password\"].is-error[data-v-f471be38],\ninput[type=\"text\"].is-error[data-v-f471be38],\ninput[type=\"number\"].is-error[data-v-f471be38],\ninput[type=\"email\"].is-error[data-v-f471be38] {\n  border-color: #fd397a;\n  box-shadow: 0 1px 5px rgba(253, 57, 122, 0.3);\n}\ntextarea[data-v-f471be38]::-moz-placeholder, input[type=\"password\"][data-v-f471be38]::-moz-placeholder, input[type=\"text\"][data-v-f471be38]::-moz-placeholder, input[type=\"number\"][data-v-f471be38]::-moz-placeholder, input[type=\"email\"][data-v-f471be38]::-moz-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-f471be38]:-ms-input-placeholder, input[type=\"password\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"text\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"number\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"email\"][data-v-f471be38]:-ms-input-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-f471be38]::placeholder,\ninput[type=\"password\"][data-v-f471be38]::placeholder,\ninput[type=\"text\"][data-v-f471be38]::placeholder,\ninput[type=\"number\"][data-v-f471be38]::placeholder,\ninput[type=\"email\"][data-v-f471be38]::placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-f471be38]:focus,\ninput[type=\"password\"][data-v-f471be38]:focus,\ninput[type=\"text\"][data-v-f471be38]:focus,\ninput[type=\"number\"][data-v-f471be38]:focus,\ninput[type=\"email\"][data-v-f471be38]:focus {\n  border-color: #00BC7E;\n  box-shadow: 0 1px 5px rgba(0, 188, 126, 0.3);\n}\ntextarea[disabled][data-v-f471be38],\ninput[type=\"password\"][disabled][data-v-f471be38],\ninput[type=\"text\"][disabled][data-v-f471be38],\ninput[type=\"number\"][disabled][data-v-f471be38],\ninput[type=\"email\"][disabled][data-v-f471be38] {\n  background: white;\n  color: rgba(27, 37, 57, 0.8);\n  -webkit-text-fill-color: rgba(27, 37, 57, 0.8);\n  opacity: 1;\n  cursor: not-allowed;\n}\n.additional-link[data-v-f471be38] {\n  font-size: 1em;\n  margin-top: 50px;\n  display: block;\n  color: #1B2539;\n}\n.additional-link b[data-v-f471be38], .additional-link a[data-v-f471be38] {\n  color: #00BC7E;\n  cursor: pointer;\n}\n.additional-link b[data-v-f471be38]:hover, .additional-link a[data-v-f471be38]:hover {\n  text-decoration: underline;\n}\n@media only screen and (max-width: 1024px) {\n.form[data-v-f471be38] {\n    max-width: 100%;\n}\n}\n@media only screen and (max-width: 960px) {\n.form .button[data-v-f471be38] {\n    margin-top: 20px;\n    width: 100%;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form input[data-v-f471be38], .form textarea[data-v-f471be38] {\n    width: 100%;\n    min-width: 100%;\n}\n.form.block-form .block-wrapper[data-v-f471be38] {\n    display: block;\n}\n.form.block-form .block-wrapper label[data-v-f471be38] {\n    width: 100%;\n    padding-right: 0;\n    display: block;\n    margin-bottom: 7px;\n    text-align: left !important;\n    font-size: 0.875em;\n    padding-top: 0;\n}\n.form.block-form .button[data-v-f471be38] {\n    margin-top: 25px;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form.inline-form[data-v-f471be38] {\n    display: block;\n}\n.form.inline-form .input-wrapper .error-message[data-v-f471be38] {\n    position: relative;\n    bottom: 0;\n}\n.form .button[data-v-f471be38] {\n    padding: 14px 32px;\n}\n.single-line-form[data-v-f471be38] {\n    display: block;\n}\n.single-line-form .submit-button[data-v-f471be38] {\n    margin-left: 0;\n    margin-top: 20px;\n    width: 100%;\n}\ntextarea[data-v-f471be38],\n  input[type=\"password\"][data-v-f471be38],\n  input[type=\"number\"][data-v-f471be38],\n  input[type=\"text\"][data-v-f471be38],\n  input[type=\"email\"][data-v-f471be38] {\n    padding: 14px 20px;\n}\n}\n@media only screen and (max-width: 690px) {\n.form.block-form .wrapper-inline[data-v-f471be38] {\n    display: block;\n}\n}\n@media (prefers-color-scheme: dark) {\n.form .input-help[data-v-f471be38] {\n    color: #7d858c;\n}\n.form.block-form .block-wrapper label[data-v-f471be38] {\n    color: #bec6cf;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-f471be38] {\n    color: #bec6cf;\n}\ntextarea[data-v-f471be38],\n  input[type=\"password\"][data-v-f471be38],\n  input[type=\"text\"][data-v-f471be38],\n  input[type=\"number\"][data-v-f471be38],\n  input[type=\"email\"][data-v-f471be38] {\n    border-color: #1e2024;\n    background: #1e2024;\n    color: #bec6cf;\n}\ntextarea[data-v-f471be38]::-moz-placeholder, input[type=\"password\"][data-v-f471be38]::-moz-placeholder, input[type=\"text\"][data-v-f471be38]::-moz-placeholder, input[type=\"number\"][data-v-f471be38]::-moz-placeholder, input[type=\"email\"][data-v-f471be38]::-moz-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-f471be38]:-ms-input-placeholder, input[type=\"password\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"text\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"number\"][data-v-f471be38]:-ms-input-placeholder, input[type=\"email\"][data-v-f471be38]:-ms-input-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-f471be38]::placeholder,\n  input[type=\"password\"][data-v-f471be38]::placeholder,\n  input[type=\"text\"][data-v-f471be38]::placeholder,\n  input[type=\"number\"][data-v-f471be38]::placeholder,\n  input[type=\"email\"][data-v-f471be38]::placeholder {\n    color: #7d858c;\n}\ntextarea[disabled][data-v-f471be38],\n  input[type=\"password\"][disabled][data-v-f471be38],\n  input[type=\"text\"][disabled][data-v-f471be38],\n  input[type=\"number\"][disabled][data-v-f471be38],\n  input[type=\"email\"][disabled][data-v-f471be38] {\n    background: #1e2024;\n    color: rgba(125, 133, 140, 0.8);\n    -webkit-text-fill-color: rgba(125, 133, 140, 0.8);\n}\n}\n.block-form[data-v-f471be38] {\n  max-width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "PageTab",
+    { staticClass: "form-fixed-width", attrs: { "is-loading": _vm.isLoading } },
+    [
+      _vm.config.stripe_public_key && _vm.payments
+        ? _c("PageTabGroup", [
+            _c(
+              "div",
+              { staticClass: "form block-form" },
+              [
+                _c("FormLabel", [
+                  _vm._v(
+                    _vm._s(_vm.$t("admin_settings.payments.section_payments"))
+                  )
+                ]),
+                _vm._v(" "),
+                _c("InfoBox", [
+                  _c("p", {
+                    domProps: {
+                      innerHTML: _vm._s(
+                        _vm.$t("admin_settings.payments.credentials_disclaimer")
+                      )
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "block-wrapper" }, [
+                  _c("div", { staticClass: "input-wrapper" }, [
+                    _c(
+                      "div",
+                      { staticClass: "inline-wrapper" },
+                      [
+                        _c("div", { staticClass: "switch-label" }, [
+                          _c("label", { staticClass: "input-label" }, [
+                            _vm._v(
+                              _vm._s(
+                                _vm.$t("admin_settings.payments.allow_payments")
+                              ) + ":"
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("SwitchInput", {
+                          staticClass: "switch",
+                          attrs: { state: _vm.payments.status },
+                          on: {
+                            input: function($event) {
+                              return _vm.$updateText(
+                                "/settings",
+                                "payments_active",
+                                _vm.payments.status
+                              )
+                            }
+                          },
+                          model: {
+                            value: _vm.payments.status,
+                            callback: function($$v) {
+                              _vm.$set(_vm.payments, "status", $$v)
+                            },
+                            expression: "payments.status"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.payments.webhook_url")) +
+                          ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Webhook URL",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  attrs: { type: "text", disabled: "" },
+                                  domProps: { value: _vm.stripeWebhookEndpoint }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        2791309690
+                      )
+                    })
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.config.stripe_public_key
+        ? _c(
+            "PageTabGroup",
+            [
+              _c("ValidationObserver", {
+                ref: "stripeCredentials",
+                staticClass: "form block-form",
+                attrs: { tag: "form" },
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.stripeCredentialsSubmit.apply(null, arguments)
+                  }
+                },
+                scopedSlots: _vm._u(
+                  [
+                    {
+                      key: "default",
+                      fn: function(ref) {
+                        var invalid = ref.invalid
+                        return [
+                          _c("FormLabel", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.$t("admin_settings.payments.stripe_setup")
+                              )
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("InfoBox", [
+                            _c("p", {
+                              domProps: {
+                                innerHTML: _vm._s(
+                                  _vm.$t(
+                                    "admin_settings.payments.stripe_create_acc"
+                                  )
+                                )
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "block-wrapper" },
+                            [
+                              _c("label", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "admin_settings.payments.stripe_currency"
+                                    )
+                                  ) + ":"
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("ValidationProvider", {
+                                staticClass: "input-wrapper",
+                                attrs: {
+                                  tag: "div",
+                                  mode: "passive",
+                                  name: "Currency",
+                                  rules: "required"
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "default",
+                                      fn: function(ref) {
+                                        var errors = ref.errors
+                                        return [
+                                          _c("SelectInput", {
+                                            attrs: {
+                                              options: _vm.currencyList,
+                                              placeholder: _vm.$t(
+                                                "admin_settings.payments.stripe_currency_plac"
+                                              ),
+                                              isError: errors[0]
+                                            },
+                                            model: {
+                                              value:
+                                                _vm.stripeCredentials.currency,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.stripeCredentials,
+                                                  "currency",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "stripeCredentials.currency"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          errors[0]
+                                            ? _c(
+                                                "span",
+                                                {
+                                                  staticClass: "error-message"
+                                                },
+                                                [_vm._v(_vm._s(errors[0]))]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  null,
+                                  true
+                                )
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "block-wrapper" },
+                            [
+                              _c("label", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "admin_settings.payments.stripe_pub_key"
+                                    )
+                                  ) + ":"
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("ValidationProvider", {
+                                staticClass: "input-wrapper",
+                                attrs: {
+                                  tag: "div",
+                                  mode: "passive",
+                                  name: "Publishable Key",
+                                  rules: "required"
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "default",
+                                      fn: function(ref) {
+                                        var errors = ref.errors
+                                        return [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value:
+                                                  _vm.stripeCredentials.key,
+                                                expression:
+                                                  "stripeCredentials.key"
+                                              }
+                                            ],
+                                            class: { "is-error": errors[0] },
+                                            attrs: {
+                                              placeholder: _vm.$t(
+                                                "admin_settings.payments.stripe_pub_key_plac"
+                                              ),
+                                              type: "text"
+                                            },
+                                            domProps: {
+                                              value: _vm.stripeCredentials.key
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  _vm.stripeCredentials,
+                                                  "key",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          errors[0]
+                                            ? _c(
+                                                "span",
+                                                {
+                                                  staticClass: "error-message"
+                                                },
+                                                [_vm._v(_vm._s(errors[0]))]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  null,
+                                  true
+                                )
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "block-wrapper" },
+                            [
+                              _c("label", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "admin_settings.payments.stripe_sec_key"
+                                    )
+                                  ) + ":"
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("ValidationProvider", {
+                                staticClass: "input-wrapper",
+                                attrs: {
+                                  tag: "div",
+                                  mode: "passive",
+                                  name: "Secret Key",
+                                  rules: "required"
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "default",
+                                      fn: function(ref) {
+                                        var errors = ref.errors
+                                        return [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value:
+                                                  _vm.stripeCredentials.secret,
+                                                expression:
+                                                  "stripeCredentials.secret"
+                                              }
+                                            ],
+                                            class: { "is-error": errors[0] },
+                                            attrs: {
+                                              placeholder: _vm.$t(
+                                                "admin_settings.payments.stripe_sec_key_plac"
+                                              ),
+                                              type: "text"
+                                            },
+                                            domProps: {
+                                              value:
+                                                _vm.stripeCredentials.secret
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  _vm.stripeCredentials,
+                                                  "secret",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          errors[0]
+                                            ? _c(
+                                                "span",
+                                                {
+                                                  staticClass: "error-message"
+                                                },
+                                                [_vm._v(_vm._s(errors[0]))]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  null,
+                                  true
+                                )
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "block-wrapper" },
+                            [
+                              _c("label", [_vm._v("Webhook URL:")]),
+                              _vm._v(" "),
+                              _c("InfoBox", [
+                                _c("p", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.$t(
+                                        "admin_settings.payments.stripe_create_webhook"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("ValidationProvider", {
+                                staticClass: "input-wrapper",
+                                attrs: {
+                                  tag: "div",
+                                  mode: "passive",
+                                  name: "Webhook URL",
+                                  rules: "required"
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "default",
+                                      fn: function(ref) {
+                                        var errors = ref.errors
+                                        return [
+                                          _c("input", {
+                                            attrs: {
+                                              type: "text",
+                                              disabled: ""
+                                            },
+                                            domProps: {
+                                              value: _vm.stripeWebhookEndpoint
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          errors[0]
+                                            ? _c(
+                                                "span",
+                                                {
+                                                  staticClass: "error-message"
+                                                },
+                                                [_vm._v(_vm._s(errors[0]))]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  null,
+                                  true
+                                )
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "block-wrapper" },
+                            [
+                              _c("label", [_vm._v("Webhook Secret:")]),
+                              _vm._v(" "),
+                              _c("ValidationProvider", {
+                                staticClass: "input-wrapper",
+                                attrs: {
+                                  tag: "div",
+                                  mode: "passive",
+                                  name: "Webhook Secret",
+                                  rules: "required"
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "default",
+                                      fn: function(ref) {
+                                        var errors = ref.errors
+                                        return [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value:
+                                                  _vm.stripeCredentials
+                                                    .webhookSecret,
+                                                expression:
+                                                  "stripeCredentials.webhookSecret"
+                                              }
+                                            ],
+                                            class: { "is-error": errors[0] },
+                                            attrs: {
+                                              placeholder: _vm.$t(
+                                                "admin_settings.payments.stripe_webhook_key_plac"
+                                              ),
+                                              type: "text"
+                                            },
+                                            domProps: {
+                                              value:
+                                                _vm.stripeCredentials
+                                                  .webhookSecret
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  _vm.stripeCredentials,
+                                                  "webhookSecret",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          errors[0]
+                                            ? _c(
+                                                "span",
+                                                {
+                                                  staticClass: "error-message"
+                                                },
+                                                [_vm._v(_vm._s(errors[0]))]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  null,
+                                  true
+                                )
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm.isError
+                            ? _c("InfoBox", { attrs: { type: "error" } }, [
+                                _c("p", [_vm._v(_vm._s(_vm.errorMessage))])
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "ButtonBase",
+                            {
+                              staticClass: "submit-button",
+                              attrs: {
+                                loading: _vm.isLoading,
+                                disabled: _vm.isLoading,
+                                type: "submit",
+                                "button-style": "theme"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(_vm.submitButtonText) +
+                                  "\n            "
+                              )
+                            ]
+                          )
+                        ]
+                      }
+                    }
+                  ],
+                  null,
+                  false,
+                  2483202031
+                )
+              })
+            ],
+            1
+          )
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Payments.vue?vue&type=template&id=f471be38&scoped=true& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true&");
+/* harmony import */ var _Payments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Payments.vue?vue&type=script&lang=js& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Payments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "f471be38",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Payments.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=style&index=0&id=f471be38&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_style_index_0_id_f471be38_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Payments.vue?vue&type=template&id=f471be38&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Payments.vue?vue&type=template&id=f471be38&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Payments_vue_vue_type_template_id_f471be38_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

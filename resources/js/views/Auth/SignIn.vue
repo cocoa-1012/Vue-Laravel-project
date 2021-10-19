@@ -2,7 +2,7 @@
     <AuthContentWrapper ref="auth">
 
         <!--Log In by Email-->
-        <AuthContent name="log-in" :visible="true">
+        <!-- <AuthContent name="log-in" :visible="true">
             <img v-if="config.app_logo" class="logo" :src="$getImage(config.app_logo)" :alt="config.app_name">
             <b v-if="! config.app_logo" class="auth-logo-text">{{ config.app_name }}</b>
 
@@ -27,7 +27,7 @@
                     {{ $t('page_login.registration_button') }}
                 </router-link>
             </span>
-        </AuthContent>
+        </AuthContent> -->
 
         <!--Log in By Password-->
         <AuthContent name="sign-in" :visible="false">

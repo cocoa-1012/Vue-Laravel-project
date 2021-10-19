@@ -1,1 +1,645 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{"+LsM":function(a,t,e){var i=e("ejmd");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},"+Pqb":function(a,t,e){"use strict";var i={name:"ProgressBar",props:["progress"]},o=(e("woIv"),e("KHd+")),r=Object(o.a)(i,(function(){var a=this.$createElement,t=this._self._c||a;return t("div",{staticClass:"progress-bar"},[t("span",{style:{width:this.progress+"%"}})])}),[],!1,null,"f372b280",null);t.a=r.exports},"+t0u":function(a,t,e){var i=e("QO4y");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},"13Td":function(a,t,e){"use strict";var i={name:"SetupBox",props:["title","description","theme"]},o=(e("jS71"),e("KHd+")),r=Object(o.a)(i,(function(){var a=this,t=a.$createElement,e=a._self._c||t;return e("div",{staticClass:"setup-box",class:a.theme},[e("b",{staticClass:"title"},[a._v(a._s(a.title))]),a._v(" "),e("p",{staticClass:"description"},[a._v(a._s(a.description))]),a._v(" "),a._t("default")],2)}),[],!1,null,"664a78dc",null);t.a=r.exports},"5pbA":function(a,t,e){"use strict";e("+t0u")},"F12+":function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".progress-bar[data-v-f372b280]{width:100%;height:5px;background:#f4f5f6;margin-top:6px;border-radius:10px}.progress-bar span[data-v-f372b280]{background:#00bc7e;display:block;height:100%;border-radius:10px;max-width:100%}@media (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}@media only screen and (min-width:680px) and (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}",""])},FEcZ:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".setup-box[data-v-664a78dc]{padding:20px;border-radius:8px;margin-bottom:30px}.setup-box .title[data-v-664a78dc]{font-size:1.3125em;margin-bottom:5px;display:block;font-weight:700}.setup-box .description[data-v-664a78dc]{font-size:.9375em;line-height:1.5;margin-bottom:20px}.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#f4f5f6}.setup-box.danger .title[data-v-664a78dc]{color:#fd397a}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#fff}.setup-box[data-v-664a78dc] .form{margin-top:20px}.setup-box[data-v-664a78dc] .form.block-form{max-width:450px}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:flex}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:20px}@media only screen and (max-width:960px){.setup-box[data-v-664a78dc] .form.block-form{max-width:100%}.setup-box[data-v-664a78dc] .form input{min-width:0}}@media only screen and (max-width:690px){.setup-box[data-v-664a78dc]{padding:15px}.setup-box .title[data-v-664a78dc]{font-size:1.0625em;margin-bottom:10px}.setup-box .description[data-v-664a78dc]{font-size:.875em}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:block}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:0;margin-top:10px}}@media (prefers-color-scheme:dark){.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#1e2024}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#131414}}",""])},GJ4H:function(a,t,e){"use strict";e.r(t);var i=e("A5+z"),o=e("xnZf"),r=e("gahf"),d=e("xxrA"),s=e("4TWA"),n=e("eZ9V"),l=e("Nv84"),p=e("13Td"),c=e("qefO"),m=e("KnjL"),u=e("TJPC"),v={name:"PlanSettings",props:["plan"],components:{ValidationProvider:i.ValidationProvider,ValidationObserver:i.ValidationObserver,StorageItemDetail:o.a,PageTabGroup:r.a,SwitchInput:d.a,SelectInput:s.a,ButtonBase:l.a,FormLabel:n.a,SetupBox:p.a,required:u.a,InfoBox:m.a,PageTab:c.a},data:function(){return{isLoading:!1,isSendingRequest:!1}},methods:{changeStatus:function(a){this.$updateText("/plans/"+this.$route.params.id+"/update","is_active",a)}}},b=(e("nbwX"),e("KHd+")),f=Object(b.a)(v,(function(){var a=this,t=a.$createElement,e=a._self._c||t;return e("PageTab",[e("ValidationObserver",{ref:"personalInformation",staticClass:"form block-form form-fixed-width",attrs:{tag:"form"},scopedSlots:a._u([{key:"default",fn:function(t){t.invalid;return[e("PageTabGroup",[e("FormLabel",[a._v("\n                "+a._s(a.$t("admin_page_plans.form.title_details"))+"\n            ")]),a._v(" "),e("div",{staticClass:"block-wrapper"},[e("div",{staticClass:"input-wrapper"},[e("div",{staticClass:"inline-wrapper"},[e("div",{staticClass:"switch-label"},[e("label",{staticClass:"input-label"},[a._v(a._s(a.$t("admin_page_plans.form.status"))+":")]),a._v(" "),e("small",{staticClass:"input-help"},[a._v(a._s(a.$t("admin_page_plans.form.status_help")))])]),a._v(" "),e("SwitchInput",{staticClass:"switch",attrs:{state:a.plan.attributes.status},on:{input:a.changeStatus}})],1)])]),a._v(" "),e("div",{staticClass:"block-wrapper"},[e("label",[a._v(a._s(a.$t("admin_page_plans.form.name"))+":")]),a._v(" "),e("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Name",rules:"required"},scopedSlots:a._u([{key:"default",fn:function(t){var i=t.errors;return[e("input",{directives:[{name:"model",rawName:"v-model",value:a.plan.attributes.name,expression:"plan.attributes.name"}],class:{"is-error":i[0]},attrs:{placeholder:a.$t("admin_page_plans.form.name_plac"),type:"text"},domProps:{value:a.plan.attributes.name},on:{input:[function(t){t.target.composing||a.$set(a.plan.attributes,"name",t.target.value)},function(t){return a.$updateText("/plans/"+a.$route.params.id+"/update","name",a.plan.attributes.name)}]}}),a._v(" "),i[0]?e("span",{staticClass:"error-message"},[a._v(a._s(i[0]))]):a._e()]}}],null,!0)})],1),a._v(" "),e("div",{staticClass:"block-wrapper"},[e("label",[a._v(a._s(a.$t("admin_page_plans.form.description"))+":")]),a._v(" "),e("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Description"},scopedSlots:a._u([{key:"default",fn:function(t){var i=t.errors;return[e("textarea",{directives:[{name:"model",rawName:"v-model",value:a.plan.attributes.description,expression:"plan.attributes.description"}],class:{"is-error":i[0]},attrs:{placeholder:a.$t("admin_page_plans.form.description_plac")},domProps:{value:a.plan.attributes.description},on:{input:[function(t){t.target.composing||a.$set(a.plan.attributes,"description",t.target.value)},function(t){return a.$updateText("/plans/"+a.$route.params.id+"/update","description",a.plan.attributes.description)}]}}),a._v(" "),i[0]?e("span",{staticClass:"error-message"},[a._v(a._s(i[0]))]):a._e()]}}],null,!0)})],1),a._v(" "),e("div",{staticClass:"block-wrapper"},[e("label",[a._v(a._s(a.$t("admin_page_plans.form.storage"))+":")]),a._v(" "),e("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Storage capacity",rules:"required"},scopedSlots:a._u([{key:"default",fn:function(t){var i=t.errors;return[e("input",{directives:[{name:"model",rawName:"v-model",value:a.plan.attributes.capacity,expression:"plan.attributes.capacity"}],class:{"is-error":i[0]},attrs:{placeholder:a.$t("admin_page_plans.form.storage_plac"),type:"number",min:"1",max:"999999999"},domProps:{value:a.plan.attributes.capacity},on:{input:[function(t){t.target.composing||a.$set(a.plan.attributes,"capacity",t.target.value)},function(t){return a.$updateText("/plans/"+a.$route.params.id+"/update","capacity",a.plan.attributes.capacity)}]}}),a._v(" "),i[0]?e("span",{staticClass:"error-message"},[a._v(a._s(i[0]))]):a._e()]}}],null,!0)}),a._v(" "),e("small",{staticClass:"input-help"},[a._v("\n                    "+a._s(a.$t("admin_page_plans.form.storage_helper"))+"\n                ")])],1),a._v(" "),e("InfoBox",[e("p",[a._v(a._s(a.$t("admin_page_plans.disclaimer_edit_price")))])])],1)]}}])})],1)}),[],!1,null,"3614d452",null);t.default=f.exports},Idvm:function(a,t,e){var i=e("lig4");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},LE5O:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".detail-storage-item[data-v-56af1b6e]{margin-bottom:35px}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span{background:#1b2539}.detail-storage-item.images .icon circle[data-v-56af1b6e],.detail-storage-item.images .icon line[data-v-56af1b6e],.detail-storage-item.images .icon path[data-v-56af1b6e],.detail-storage-item.images .icon polygon[data-v-56af1b6e],.detail-storage-item.images .icon polyline[data-v-56af1b6e],.detail-storage-item.images .icon rect[data-v-56af1b6e]{stroke:#9d66fe}.detail-storage-item.images .storage-progress[data-v-56af1b6e] span{background:#9d66fe}.detail-storage-item.videos .icon circle[data-v-56af1b6e],.detail-storage-item.videos .icon line[data-v-56af1b6e],.detail-storage-item.videos .icon path[data-v-56af1b6e],.detail-storage-item.videos .icon polygon[data-v-56af1b6e],.detail-storage-item.videos .icon polyline[data-v-56af1b6e],.detail-storage-item.videos .icon rect[data-v-56af1b6e]{stroke:#ffbd2d}.detail-storage-item.videos .storage-progress[data-v-56af1b6e] span{background:#ffbd2d}.detail-storage-item.audios .icon circle[data-v-56af1b6e],.detail-storage-item.audios .icon line[data-v-56af1b6e],.detail-storage-item.audios .icon path[data-v-56af1b6e],.detail-storage-item.audios .icon polygon[data-v-56af1b6e],.detail-storage-item.audios .icon polyline[data-v-56af1b6e],.detail-storage-item.audios .icon rect[data-v-56af1b6e]{stroke:#fe66a1}.detail-storage-item.audios .storage-progress[data-v-56af1b6e] span{background:#fe66a1}.detail-storage-item.documents .icon circle[data-v-56af1b6e],.detail-storage-item.documents .icon line[data-v-56af1b6e],.detail-storage-item.documents .icon path[data-v-56af1b6e],.detail-storage-item.documents .icon polygon[data-v-56af1b6e],.detail-storage-item.documents .icon polyline[data-v-56af1b6e],.detail-storage-item.documents .icon rect[data-v-56af1b6e]{stroke:#fe6057}.detail-storage-item.documents .storage-progress[data-v-56af1b6e] span{background:#fe6057}.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#1b2539}.header-storage-item[data-v-56af1b6e]{display:flex;align-items:flex-start;margin-bottom:10px}.header-storage-item .icon[data-v-56af1b6e]{width:35px}.header-storage-item .type[data-v-56af1b6e]{font-size:.9375em;color:#1b2539}.header-storage-item .total-size[data-v-56af1b6e]{font-size:.625em;display:block;color:rgba(27,37,57,.7)}@media (prefers-color-scheme:dark){.header-storage-item .type[data-v-56af1b6e]{color:#bec6cf}.header-storage-item .total-size[data-v-56af1b6e]{color:#7d858c}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e],.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#41454e}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span,.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#41454e}}",""])},QO4y:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,"",""])},VA79:function(a,t,e){var i=e("F12+");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},Xk6H:function(a,t,e){"use strict";e("Idvm")},b0xl:function(a,t,e){"use strict";e("oyp5")},eZ9V:function(a,t,e){"use strict";var i={name:"FormLabel",components:{Edit2Icon:e("CjXH").q}},o=(e("Xk6H"),e("KHd+")),r=Object(o.a)(i,(function(){var a=this.$createElement,t=this._self._c||a;return t("div",{staticClass:"form-label"},[t("edit-2-icon",{staticClass:"icon",attrs:{size:"22"}}),this._v(" "),t("b",{staticClass:"label"},[this._t("default")],2)],1)}),[],!1,null,"c1157a8e",null);t.a=r.exports},ejmd:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".form[data-v-3614d452]{max-width:700px}.form.inline-form[data-v-3614d452]{display:flex;position:relative;justify-content:center;margin:0 auto}.form.inline-form .input-wrapper[data-v-3614d452]{position:relative}.form.inline-form .input-wrapper .error-message[data-v-3614d452]{position:absolute;left:0;bottom:-25px}.form.block-form .wrapper-inline[data-v-3614d452]{display:flex;margin:0 -15px}.form.block-form .wrapper-inline .block-wrapper[data-v-3614d452]{width:100%;padding:0 15px}.form.block-form .block-wrapper[data-v-3614d452]{margin-bottom:32px}.form.block-form .block-wrapper label[data-v-3614d452]{font-size:.875em;color:rgba(27,37,57,.8);font-weight:700;display:block;margin-bottom:7px;text-align:left}.form.block-form .block-wrapper[data-v-3614d452]:last-child{margin-bottom:0}.form.block-form .button[data-v-3614d452]{margin-top:50px}.form .inline-wrapper[data-v-3614d452]{display:flex;align-items:center;justify-content:space-between}.form .inline-wrapper .switch-label .input-help[data-v-3614d452]{padding-top:0}.form .inline-wrapper .switch-label .input-label[data-v-3614d452]{font-weight:700;color:#1b2539;font-size:1em;margin-bottom:5px}.form .input-help[data-v-3614d452]{font-size:.75em;color:rgba(27,37,57,.7);line-height:1.35;padding-top:10px;display:block}.single-line-form[data-v-3614d452]{display:flex}.single-line-form .submit-button[data-v-3614d452]{margin-left:20px}.error-message[data-v-3614d452]{font-size:.875em;color:#fd397a;padding-top:5px;display:block;text-align:left}textarea[data-v-3614d452]{width:100%}input[type=email][data-v-3614d452],input[type=number][data-v-3614d452],input[type=password][data-v-3614d452],input[type=text][data-v-3614d452],textarea[data-v-3614d452]{border:1px solid transparent;transition:all .15s ease;font-size:1em;border-radius:8px;padding:13px 20px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-weight:700;outline:0;width:100%;box-shadow:0 1px 5px rgba(0,0,0,.12)}input[type=email].is-error[data-v-3614d452],input[type=number].is-error[data-v-3614d452],input[type=password].is-error[data-v-3614d452],input[type=text].is-error[data-v-3614d452],textarea.is-error[data-v-3614d452]{border-color:#fd397a;box-shadow:0 1px 5px rgba(253,57,122,.3)}input[type=email][data-v-3614d452]::-moz-placeholder,input[type=number][data-v-3614d452]::-moz-placeholder,input[type=password][data-v-3614d452]::-moz-placeholder,input[type=text][data-v-3614d452]::-moz-placeholder,textarea[data-v-3614d452]::-moz-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-3614d452]:-ms-input-placeholder,input[type=number][data-v-3614d452]:-ms-input-placeholder,input[type=password][data-v-3614d452]:-ms-input-placeholder,input[type=text][data-v-3614d452]:-ms-input-placeholder,textarea[data-v-3614d452]:-ms-input-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-3614d452]::placeholder,input[type=number][data-v-3614d452]::placeholder,input[type=password][data-v-3614d452]::placeholder,input[type=text][data-v-3614d452]::placeholder,textarea[data-v-3614d452]::placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-3614d452]:focus,input[type=number][data-v-3614d452]:focus,input[type=password][data-v-3614d452]:focus,input[type=text][data-v-3614d452]:focus,textarea[data-v-3614d452]:focus{border-color:#00bc7e;box-shadow:0 1px 5px rgba(0,188,126,.3)}input[type=email][disabled][data-v-3614d452],input[type=number][disabled][data-v-3614d452],input[type=password][disabled][data-v-3614d452],input[type=text][disabled][data-v-3614d452],textarea[disabled][data-v-3614d452]{background:#fff;color:rgba(27,37,57,.8);-webkit-text-fill-color:rgba(27,37,57,.8);opacity:1;cursor:not-allowed}.additional-link[data-v-3614d452]{font-size:1em;margin-top:50px;display:block;color:#1b2539}.additional-link a[data-v-3614d452],.additional-link b[data-v-3614d452]{color:#00bc7e;cursor:pointer}.additional-link a[data-v-3614d452]:hover,.additional-link b[data-v-3614d452]:hover{text-decoration:underline}@media only screen and (max-width:1024px){.form[data-v-3614d452]{max-width:100%}}@media only screen and (max-width:960px){.form .button[data-v-3614d452]{margin-top:20px;width:100%;margin-left:0;margin-right:0}.form input[data-v-3614d452],.form textarea[data-v-3614d452]{width:100%;min-width:100%}.form.block-form .block-wrapper[data-v-3614d452]{display:block}.form.block-form .block-wrapper label[data-v-3614d452]{width:100%;padding-right:0;display:block;margin-bottom:7px;text-align:left!important;font-size:.875em;padding-top:0}.form.block-form .button[data-v-3614d452]{margin-top:25px;margin-left:0;margin-right:0}.form.inline-form[data-v-3614d452]{display:block}.form.inline-form .input-wrapper .error-message[data-v-3614d452]{position:relative;bottom:0}.form .button[data-v-3614d452]{padding:14px 32px}.single-line-form[data-v-3614d452]{display:block}.single-line-form .submit-button[data-v-3614d452]{margin-left:0;margin-top:20px;width:100%}input[type=email][data-v-3614d452],input[type=number][data-v-3614d452],input[type=password][data-v-3614d452],input[type=text][data-v-3614d452],textarea[data-v-3614d452]{padding:14px 20px}}@media only screen and (max-width:690px){.form.block-form .wrapper-inline[data-v-3614d452]{display:block}}@media (prefers-color-scheme:dark){.form .input-help[data-v-3614d452]{color:#7d858c}.form.block-form .block-wrapper label[data-v-3614d452],.form .inline-wrapper .switch-label .input-label[data-v-3614d452]{color:#bec6cf}input[type=email][data-v-3614d452],input[type=number][data-v-3614d452],input[type=password][data-v-3614d452],input[type=text][data-v-3614d452],textarea[data-v-3614d452]{border-color:#1e2024;background:#1e2024;color:#bec6cf}input[type=email][data-v-3614d452]::-moz-placeholder,input[type=number][data-v-3614d452]::-moz-placeholder,input[type=password][data-v-3614d452]::-moz-placeholder,input[type=text][data-v-3614d452]::-moz-placeholder,textarea[data-v-3614d452]::-moz-placeholder{color:#7d858c}input[type=email][data-v-3614d452]:-ms-input-placeholder,input[type=number][data-v-3614d452]:-ms-input-placeholder,input[type=password][data-v-3614d452]:-ms-input-placeholder,input[type=text][data-v-3614d452]:-ms-input-placeholder,textarea[data-v-3614d452]:-ms-input-placeholder{color:#7d858c}input[type=email][data-v-3614d452]::placeholder,input[type=number][data-v-3614d452]::placeholder,input[type=password][data-v-3614d452]::placeholder,input[type=text][data-v-3614d452]::placeholder,textarea[data-v-3614d452]::placeholder{color:#7d858c}input[type=email][disabled][data-v-3614d452],input[type=number][disabled][data-v-3614d452],input[type=password][disabled][data-v-3614d452],input[type=text][disabled][data-v-3614d452],textarea[disabled][data-v-3614d452]{background:#1e2024;color:rgba(125,133,140,.8);-webkit-text-fill-color:rgba(125,133,140,.8)}}.block-form[data-v-3614d452]{max-width:100%}",""])},gahf:function(a,t,e){"use strict";var i={name:"PageTabGroup"},o=(e("yI2c"),e("KHd+")),r=Object(o.a)(i,(function(){var a=this.$createElement;return(this._self._c||a)("div",{staticClass:"page-tab-group"},[this._t("default")],2)}),[],!1,null,"1bb470e4",null);t.a=r.exports},jS71:function(a,t,e){"use strict";e("wsaA")},lig4:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".form-label[data-v-c1157a8e]{display:flex;align-items:center;margin-bottom:30px}.form-label .icon[data-v-c1157a8e]{margin-right:10px}.form-label .icon path[data-v-c1157a8e]{stroke:#00bc7e}.form-label .label[data-v-c1157a8e]{font-size:1.125em;font-weight:700}@media (prefers-color-scheme:dark){.form-label .label[data-v-c1157a8e]{color:#bec6cf}}",""])},nbwX:function(a,t,e){"use strict";e("+LsM")},oDxr:function(a,t,e){(a.exports=e("I1BE")(!1)).push([a.i,".page-tab-group[data-v-1bb470e4]{margin-bottom:65px}",""])},oyp5:function(a,t,e){var i=e("LE5O");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},qefO:function(a,t,e){"use strict";var i={name:"PageTab",props:["isLoading"],components:{Spinner:e("zTYo").a}},o=(e("5pbA"),e("KHd+")),r=Object(o.a)(i,(function(){var a=this.$createElement,t=this._self._c||a;return t("div",{staticClass:"page-tab"},[t("div",{directives:[{name:"show",rawName:"v-show",value:this.isLoading,expression:"isLoading"}],attrs:{id:"loader"}},[t("Spinner")],1),this._v(" "),this._t("default")],2)}),[],!1,null,"4339da66",null);t.a=r.exports},woIv:function(a,t,e){"use strict";e("VA79")},wsaA:function(a,t,e){var i=e("FEcZ");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)},xnZf:function(a,t,e){"use strict";var i=e("+Pqb"),o=e("CjXH"),r={name:"StorageItemDetail",props:["percentage","title","type","used"],components:{HardDriveIcon:o.A,FileTextIcon:o.v,ProgressBar:i.a,MusicIcon:o.M,VideoIcon:o.fb,ImageIcon:o.C,FileIcon:o.u}},d=(e("b0xl"),e("KHd+")),s=Object(d.a)(r,(function(){var a=this,t=a.$createElement,e=a._self._c||t;return e("article",{staticClass:"detail-storage-item",class:a.type},[e("div",{staticClass:"header-storage-item"},[e("div",{staticClass:"icon"},["images"==a.type?e("image-icon",{attrs:{size:"23"}}):a._e(),a._v(" "),"videos"==a.type?e("video-icon",{attrs:{size:"23"}}):a._e(),a._v(" "),"audios"==a.type?e("music-icon",{attrs:{size:"23"}}):a._e(),a._v(" "),"documents"==a.type?e("file-text-icon",{attrs:{size:"23"}}):a._e(),a._v(" "),"others"==a.type?e("file-icon",{attrs:{size:"23"}}):a._e(),a._v(" "),"disk"==a.type?e("hard-drive-icon",{attrs:{size:"23"}}):a._e()],1),a._v(" "),e("div",{staticClass:"title"},[e("b",{staticClass:"type"},[a._v(a._s(a.title))]),a._v(" "),e("span",{staticClass:"total-size"},[a._v(a._s(a.used))])])]),a._v(" "),e("ProgressBar",{staticClass:"storage-progress",attrs:{progress:a.percentage}})],1)}),[],!1,null,"56af1b6e",null);t.a=s.exports},yI2c:function(a,t,e){"use strict";e("zlQ3")},zlQ3:function(a,t,e){var i=e("oDxr");"string"==typeof i&&(i=[[a.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};e("aET+")(i,o);i.locals&&(a.exports=i.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunks/plan-settings"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vee-validate/dist/vee-validate.full */ "./node_modules/vee-validate/dist/vee-validate.full.js");
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/Others/StorageItemDetail */ "./resources/js/components/Others/StorageItemDetail.vue");
+/* harmony import */ var _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Others/Layout/PageTabGroup */ "./resources/js/components/Others/Layout/PageTabGroup.vue");
+/* harmony import */ var _components_Others_Forms_SwitchInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Others/Forms/SwitchInput */ "./resources/js/components/Others/Forms/SwitchInput.vue");
+/* harmony import */ var _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Others/Forms/SelectInput */ "./resources/js/components/Others/Forms/SelectInput.vue");
+/* harmony import */ var _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/Others/Forms/FormLabel */ "./resources/js/components/Others/Forms/FormLabel.vue");
+/* harmony import */ var _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/FilesView/ButtonBase */ "./resources/js/components/FilesView/ButtonBase.vue");
+/* harmony import */ var _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/components/Others/Forms/SetupBox */ "./resources/js/components/Others/Forms/SetupBox.vue");
+/* harmony import */ var _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/components/Others/Layout/PageTab */ "./resources/js/components/Others/Layout/PageTab.vue");
+/* harmony import */ var _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/components/Others/Forms/InfoBox */ "./resources/js/components/Others/Forms/InfoBox.vue");
+/* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'PlanSettings',
+  props: ['plan'],
+  components: {
+    ValidationProvider: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__["ValidationProvider"],
+    ValidationObserver: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__["ValidationObserver"],
+    StorageItemDetail: _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PageTabGroup: _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_2__["default"],
+    SwitchInput: _components_Others_Forms_SwitchInput__WEBPACK_IMPORTED_MODULE_3__["default"],
+    SelectInput: _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ButtonBase: _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_6__["default"],
+    FormLabel: _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_5__["default"],
+    SetupBox: _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_7__["default"],
+    required: vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_10__["required"],
+    InfoBox: _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_9__["default"],
+    PageTab: _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_8__["default"]
+  },
+  data: function data() {
+    return {
+      isLoading: false,
+      isSendingRequest: false
+    };
+  },
+  methods: {
+    changeStatus: function changeStatus(val) {
+      this.$updateText('/plans/' + this.$route.params.id + '/update', 'is_active', val);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".form[data-v-40e74040] {\n  max-width: 700px;\n}\n.form.inline-form[data-v-40e74040] {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  margin: 0 auto;\n}\n.form.inline-form .input-wrapper[data-v-40e74040] {\n  position: relative;\n}\n.form.inline-form .input-wrapper .error-message[data-v-40e74040] {\n  position: absolute;\n  left: 0;\n  bottom: -25px;\n}\n.form.block-form .wrapper-inline[data-v-40e74040] {\n  display: flex;\n  margin: 0 -15px;\n}\n.form.block-form .wrapper-inline .block-wrapper[data-v-40e74040] {\n  width: 100%;\n  padding: 0 15px;\n}\n.form.block-form .block-wrapper[data-v-40e74040] {\n  margin-bottom: 32px;\n}\n.form.block-form .block-wrapper label[data-v-40e74040] {\n  font-size: 0.875em;\n  color: rgba(27, 37, 57, 0.8);\n  font-weight: 700;\n  display: block;\n  margin-bottom: 7px;\n  text-align: left;\n}\n.form.block-form .block-wrapper[data-v-40e74040]:last-child {\n  margin-bottom: 0;\n}\n.form.block-form .button[data-v-40e74040] {\n  margin-top: 50px;\n}\n.form .inline-wrapper[data-v-40e74040] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.form .inline-wrapper .switch-label .input-help[data-v-40e74040] {\n  padding-top: 0;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-40e74040] {\n  font-weight: 700;\n  color: #1B2539;\n  font-size: 1em;\n  margin-bottom: 5px;\n}\n.form .input-help[data-v-40e74040] {\n  font-size: 0.75em;\n  color: rgba(27, 37, 57, 0.7);\n  line-height: 1.35;\n  padding-top: 10px;\n  display: block;\n}\n.single-line-form[data-v-40e74040] {\n  display: flex;\n}\n.single-line-form .submit-button[data-v-40e74040] {\n  margin-left: 20px;\n}\n.error-message[data-v-40e74040] {\n  font-size: 0.875em;\n  color: #fd397a;\n  padding-top: 5px;\n  display: block;\n  text-align: left;\n}\ntextarea[data-v-40e74040] {\n  width: 100%;\n}\ntextarea[data-v-40e74040],\ninput[type=\"password\"][data-v-40e74040],\ninput[type=\"text\"][data-v-40e74040],\ninput[type=\"number\"][data-v-40e74040],\ninput[type=\"email\"][data-v-40e74040] {\n  border: 1px solid transparent;\n  transition: 150ms all ease;\n  font-size: 1em;\n  border-radius: 8px;\n  padding: 13px 20px;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  font-weight: 700;\n  outline: 0;\n  width: 100%;\n  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);\n}\ntextarea.is-error[data-v-40e74040],\ninput[type=\"password\"].is-error[data-v-40e74040],\ninput[type=\"text\"].is-error[data-v-40e74040],\ninput[type=\"number\"].is-error[data-v-40e74040],\ninput[type=\"email\"].is-error[data-v-40e74040] {\n  border-color: #fd397a;\n  box-shadow: 0 1px 5px rgba(253, 57, 122, 0.3);\n}\ntextarea[data-v-40e74040]::-moz-placeholder, input[type=\"password\"][data-v-40e74040]::-moz-placeholder, input[type=\"text\"][data-v-40e74040]::-moz-placeholder, input[type=\"number\"][data-v-40e74040]::-moz-placeholder, input[type=\"email\"][data-v-40e74040]::-moz-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-40e74040]:-ms-input-placeholder, input[type=\"password\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"text\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"number\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"email\"][data-v-40e74040]:-ms-input-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-40e74040]::placeholder,\ninput[type=\"password\"][data-v-40e74040]::placeholder,\ninput[type=\"text\"][data-v-40e74040]::placeholder,\ninput[type=\"number\"][data-v-40e74040]::placeholder,\ninput[type=\"email\"][data-v-40e74040]::placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-40e74040]:focus,\ninput[type=\"password\"][data-v-40e74040]:focus,\ninput[type=\"text\"][data-v-40e74040]:focus,\ninput[type=\"number\"][data-v-40e74040]:focus,\ninput[type=\"email\"][data-v-40e74040]:focus {\n  border-color: #00BC7E;\n  box-shadow: 0 1px 5px rgba(0, 188, 126, 0.3);\n}\ntextarea[disabled][data-v-40e74040],\ninput[type=\"password\"][disabled][data-v-40e74040],\ninput[type=\"text\"][disabled][data-v-40e74040],\ninput[type=\"number\"][disabled][data-v-40e74040],\ninput[type=\"email\"][disabled][data-v-40e74040] {\n  background: white;\n  color: rgba(27, 37, 57, 0.8);\n  -webkit-text-fill-color: rgba(27, 37, 57, 0.8);\n  opacity: 1;\n  cursor: not-allowed;\n}\n.additional-link[data-v-40e74040] {\n  font-size: 1em;\n  margin-top: 50px;\n  display: block;\n  color: #1B2539;\n}\n.additional-link b[data-v-40e74040], .additional-link a[data-v-40e74040] {\n  color: #00BC7E;\n  cursor: pointer;\n}\n.additional-link b[data-v-40e74040]:hover, .additional-link a[data-v-40e74040]:hover {\n  text-decoration: underline;\n}\n@media only screen and (max-width: 1024px) {\n.form[data-v-40e74040] {\n    max-width: 100%;\n}\n}\n@media only screen and (max-width: 960px) {\n.form .button[data-v-40e74040] {\n    margin-top: 20px;\n    width: 100%;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form input[data-v-40e74040], .form textarea[data-v-40e74040] {\n    width: 100%;\n    min-width: 100%;\n}\n.form.block-form .block-wrapper[data-v-40e74040] {\n    display: block;\n}\n.form.block-form .block-wrapper label[data-v-40e74040] {\n    width: 100%;\n    padding-right: 0;\n    display: block;\n    margin-bottom: 7px;\n    text-align: left !important;\n    font-size: 0.875em;\n    padding-top: 0;\n}\n.form.block-form .button[data-v-40e74040] {\n    margin-top: 25px;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form.inline-form[data-v-40e74040] {\n    display: block;\n}\n.form.inline-form .input-wrapper .error-message[data-v-40e74040] {\n    position: relative;\n    bottom: 0;\n}\n.form .button[data-v-40e74040] {\n    padding: 14px 32px;\n}\n.single-line-form[data-v-40e74040] {\n    display: block;\n}\n.single-line-form .submit-button[data-v-40e74040] {\n    margin-left: 0;\n    margin-top: 20px;\n    width: 100%;\n}\ntextarea[data-v-40e74040],\n  input[type=\"password\"][data-v-40e74040],\n  input[type=\"number\"][data-v-40e74040],\n  input[type=\"text\"][data-v-40e74040],\n  input[type=\"email\"][data-v-40e74040] {\n    padding: 14px 20px;\n}\n}\n@media only screen and (max-width: 690px) {\n.form.block-form .wrapper-inline[data-v-40e74040] {\n    display: block;\n}\n}\n@media (prefers-color-scheme: dark) {\n.form .input-help[data-v-40e74040] {\n    color: #7d858c;\n}\n.form.block-form .block-wrapper label[data-v-40e74040] {\n    color: #bec6cf;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-40e74040] {\n    color: #bec6cf;\n}\ntextarea[data-v-40e74040],\n  input[type=\"password\"][data-v-40e74040],\n  input[type=\"text\"][data-v-40e74040],\n  input[type=\"number\"][data-v-40e74040],\n  input[type=\"email\"][data-v-40e74040] {\n    border-color: #1e2024;\n    background: #1e2024;\n    color: #bec6cf;\n}\ntextarea[data-v-40e74040]::-moz-placeholder, input[type=\"password\"][data-v-40e74040]::-moz-placeholder, input[type=\"text\"][data-v-40e74040]::-moz-placeholder, input[type=\"number\"][data-v-40e74040]::-moz-placeholder, input[type=\"email\"][data-v-40e74040]::-moz-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-40e74040]:-ms-input-placeholder, input[type=\"password\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"text\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"number\"][data-v-40e74040]:-ms-input-placeholder, input[type=\"email\"][data-v-40e74040]:-ms-input-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-40e74040]::placeholder,\n  input[type=\"password\"][data-v-40e74040]::placeholder,\n  input[type=\"text\"][data-v-40e74040]::placeholder,\n  input[type=\"number\"][data-v-40e74040]::placeholder,\n  input[type=\"email\"][data-v-40e74040]::placeholder {\n    color: #7d858c;\n}\ntextarea[disabled][data-v-40e74040],\n  input[type=\"password\"][disabled][data-v-40e74040],\n  input[type=\"text\"][disabled][data-v-40e74040],\n  input[type=\"number\"][disabled][data-v-40e74040],\n  input[type=\"email\"][disabled][data-v-40e74040] {\n    background: #1e2024;\n    color: rgba(125, 133, 140, 0.8);\n    -webkit-text-fill-color: rgba(125, 133, 140, 0.8);\n}\n}\n.block-form[data-v-40e74040] {\n  max-width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "PageTab",
+    [
+      _c("ValidationObserver", {
+        ref: "personalInformation",
+        staticClass: "form block-form form-fixed-width",
+        attrs: { tag: "form" },
+        scopedSlots: _vm._u([
+          {
+            key: "default",
+            fn: function(ref) {
+              var invalid = ref.invalid
+              return [
+                _c(
+                  "PageTabGroup",
+                  [
+                    _c("FormLabel", [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(
+                            _vm.$t("admin_page_plans.form.title_details")
+                          ) +
+                          "\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "block-wrapper" }, [
+                      _c("div", { staticClass: "input-wrapper" }, [
+                        _c(
+                          "div",
+                          { staticClass: "inline-wrapper" },
+                          [
+                            _c("div", { staticClass: "switch-label" }, [
+                              _c("label", { staticClass: "input-label" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("admin_page_plans.form.status")
+                                  ) + ":"
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("small", { staticClass: "input-help" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("admin_page_plans.form.status_help")
+                                  )
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("SwitchInput", {
+                              staticClass: "switch",
+                              attrs: { state: _vm.plan.attributes.status },
+                              on: { input: _vm.changeStatus }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "block-wrapper" },
+                      [
+                        _c("label", [
+                          _vm._v(
+                            _vm._s(_vm.$t("admin_page_plans.form.name")) + ":"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("ValidationProvider", {
+                          staticClass: "input-wrapper",
+                          attrs: {
+                            tag: "div",
+                            mode: "passive",
+                            name: "Name",
+                            rules: "required"
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var errors = ref.errors
+                                  return [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.plan.attributes.name,
+                                          expression: "plan.attributes.name"
+                                        }
+                                      ],
+                                      class: { "is-error": errors[0] },
+                                      attrs: {
+                                        placeholder: _vm.$t(
+                                          "admin_page_plans.form.name_plac"
+                                        ),
+                                        type: "text"
+                                      },
+                                      domProps: {
+                                        value: _vm.plan.attributes.name
+                                      },
+                                      on: {
+                                        input: [
+                                          function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.plan.attributes,
+                                              "name",
+                                              $event.target.value
+                                            )
+                                          },
+                                          function($event) {
+                                            return _vm.$updateText(
+                                              "/plans/" +
+                                                _vm.$route.params.id +
+                                                "/update",
+                                              "name",
+                                              _vm.plan.attributes.name
+                                            )
+                                          }
+                                        ]
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    errors[0]
+                                      ? _c(
+                                          "span",
+                                          { staticClass: "error-message" },
+                                          [_vm._v(_vm._s(errors[0]))]
+                                        )
+                                      : _vm._e()
+                                  ]
+                                }
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "block-wrapper" },
+                      [
+                        _c("label", [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t("admin_page_plans.form.description")
+                            ) + ":"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("ValidationProvider", {
+                          staticClass: "input-wrapper",
+                          attrs: {
+                            tag: "div",
+                            mode: "passive",
+                            name: "Description"
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var errors = ref.errors
+                                  return [
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.plan.attributes.description,
+                                          expression:
+                                            "plan.attributes.description"
+                                        }
+                                      ],
+                                      class: { "is-error": errors[0] },
+                                      attrs: {
+                                        placeholder: _vm.$t(
+                                          "admin_page_plans.form.description_plac"
+                                        )
+                                      },
+                                      domProps: {
+                                        value: _vm.plan.attributes.description
+                                      },
+                                      on: {
+                                        input: [
+                                          function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.plan.attributes,
+                                              "description",
+                                              $event.target.value
+                                            )
+                                          },
+                                          function($event) {
+                                            return _vm.$updateText(
+                                              "/plans/" +
+                                                _vm.$route.params.id +
+                                                "/update",
+                                              "description",
+                                              _vm.plan.attributes.description
+                                            )
+                                          }
+                                        ]
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    errors[0]
+                                      ? _c(
+                                          "span",
+                                          { staticClass: "error-message" },
+                                          [_vm._v(_vm._s(errors[0]))]
+                                        )
+                                      : _vm._e()
+                                  ]
+                                }
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "block-wrapper" },
+                      [
+                        _c("label", [
+                          _vm._v(
+                            _vm._s(_vm.$t("admin_page_plans.form.storage")) +
+                              ":"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("ValidationProvider", {
+                          staticClass: "input-wrapper",
+                          attrs: {
+                            tag: "div",
+                            mode: "passive",
+                            name: "Storage capacity",
+                            rules: "required"
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var errors = ref.errors
+                                  return [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.plan.attributes.capacity,
+                                          expression: "plan.attributes.capacity"
+                                        }
+                                      ],
+                                      class: { "is-error": errors[0] },
+                                      attrs: {
+                                        placeholder: _vm.$t(
+                                          "admin_page_plans.form.storage_plac"
+                                        ),
+                                        type: "number",
+                                        min: "1",
+                                        max: "999999999"
+                                      },
+                                      domProps: {
+                                        value: _vm.plan.attributes.capacity
+                                      },
+                                      on: {
+                                        input: [
+                                          function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.plan.attributes,
+                                              "capacity",
+                                              $event.target.value
+                                            )
+                                          },
+                                          function($event) {
+                                            return _vm.$updateText(
+                                              "/plans/" +
+                                                _vm.$route.params.id +
+                                                "/update",
+                                              "capacity",
+                                              _vm.plan.attributes.capacity
+                                            )
+                                          }
+                                        ]
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    errors[0]
+                                      ? _c(
+                                          "span",
+                                          { staticClass: "error-message" },
+                                          [_vm._v(_vm._s(errors[0]))]
+                                        )
+                                      : _vm._e()
+                                  ]
+                                }
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c("small", { staticClass: "input-help" }, [
+                          _vm._v(
+                            "\n                    " +
+                              _vm._s(
+                                _vm.$t("admin_page_plans.form.storage_helper")
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("InfoBox", [
+                      _c("p", [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$t("admin_page_plans.disclaimer_edit_price")
+                          )
+                        )
+                      ])
+                    ])
+                  ],
+                  1
+                )
+              ]
+            }
+          }
+        ])
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PlanSettings.vue?vue&type=template&id=40e74040&scoped=true& */ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true&");
+/* harmony import */ var _PlanSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PlanSettings.vue?vue&type=script&lang=js& */ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& */ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PlanSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "40e74040",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./PlanSettings.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=style&index=0&id=40e74040&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_style_index_0_id_40e74040_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./PlanSettings.vue?vue&type=template&id=40e74040&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/Plans/PlanTabs/PlanSettings.vue?vue&type=template&id=40e74040&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlanSettings_vue_vue_type_template_id_40e74040_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

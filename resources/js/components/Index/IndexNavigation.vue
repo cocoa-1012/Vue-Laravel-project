@@ -17,7 +17,7 @@
                     </router-link>
                 </li>
             </ul>
-            <ul class="navigation-links">
+            <!-- <ul class="navigation-links">
                 <li>
                     <router-link :to="{name: 'SignIn'}">
                         {{ $t('page_index.menu.log_in') }}
@@ -28,7 +28,7 @@
                         {{ $t('page_index.menu.sign_in') }}
                     </router-link>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <router-link class="cta-button log-in" :to="{name: 'SignIn'}">
             {{ $t('page_index.menu.log_in') }}

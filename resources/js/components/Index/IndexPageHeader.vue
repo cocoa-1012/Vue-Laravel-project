@@ -11,9 +11,9 @@
         </router-link>
 
         <!--User login button-->
-        <router-link v-if="! config.userRegistration" class="sign-up-button" :to="{name: 'SignIn'}">
+        <!-- <router-link v-if="! config.userRegistration" class="sign-up-button" :to="{name: 'SignIn'}">
             <AuthButton class="button" icon="chevron-right" :text="$t('page_index.menu.log_in')" />
-        </router-link>
+        </router-link> -->
 
         <div class="features" v-if="config.isSaaS">
             <div class="feature">

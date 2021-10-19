@@ -1,5 +1,5 @@
 /*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -17,7 +17,7 @@
  */
 
 /*!
- * vue-i18n v8.24.4 
+ * vue-i18n v8.26.5 
  * (c) 2021 kazuya kawaguchi
  * Released under the MIT License.
  */
@@ -29,7 +29,7 @@
  */
 
 /**
-  * vee-validate v3.4.9
+  * vee-validate v3.4.13
   * (c) 2021 Abdelrahman Awad
   * @license MIT
   */

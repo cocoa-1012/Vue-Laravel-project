@@ -1,1 +1,1095 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"+Pqb":function(e,t,a){"use strict";var i={name:"ProgressBar",props:["progress"]},o=(a("woIv"),a("KHd+")),r=Object(o.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"progress-bar"},[t("span",{style:{width:this.progress+"%"}})])}),[],!1,null,"f372b280",null);t.a=r.exports},"+t0u":function(e,t,a){var i=a("QO4y");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},"13Td":function(e,t,a){"use strict";var i={name:"SetupBox",props:["title","description","theme"]},o=(a("jS71"),a("KHd+")),r=Object(o.a)(i,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",{staticClass:"setup-box",class:e.theme},[a("b",{staticClass:"title"},[e._v(e._s(e.title))]),e._v(" "),a("p",{staticClass:"description"},[e._v(e._s(e.description))]),e._v(" "),e._t("default")],2)}),[],!1,null,"664a78dc",null);t.a=r.exports},"5pbA":function(e,t,a){"use strict";a("+t0u")},"D+dh":function(e,t,a){"use strict";var i=a("CjXH"),o={name:"ImageInput",props:["image","error"],components:{ImageIcon:i.C,XIcon:i.gb},data:function(){return{imagePreview:void 0}},computed:{isData:function(){return void 0!==this.imagePreview&&""!==this.imagePreview}},methods:{resetImage:function(){this.imagePreview=void 0,this.$emit("input",void 0)},showImagePreview:function(e){var t=this,a=e.target.files[0].name,i=a.substring(a.lastIndexOf(".")+1).toLowerCase();if(["png","jpg","jpeg","svg"].includes(i)){var o=e.target.files[0],r=new FileReader;r.onload=function(){return t.imagePreview=r.result},r.readAsDataURL(o),this.$emit("input",e.target.files[0])}else alert(this.$t("validation_errors.wrong_image"))}},created:function(){this.image&&(this.imagePreview=this.image)}},r=(a("w9z4"),a("KHd+")),n=Object(r.a)(o,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",{staticClass:"dropzone",class:{"is-error":e.error}},[e.imagePreview?a("div",{staticClass:"reset-image",on:{click:e.resetImage}},[a("x-icon",{staticClass:"close-icon",attrs:{size:"14"}})],1):e._e(),e._v(" "),a("input",{ref:"file",staticClass:"dummy",attrs:{type:"file"},on:{change:function(t){return e.showImagePreview(t)}}}),e._v(" "),e.imagePreview?a("img",{ref:"image",staticClass:"image-preview",attrs:{src:e.imagePreview}}):e._e(),e._v(" "),a("div",{directives:[{name:"show",rawName:"v-show",value:!e.isData,expression:"! isData"}],staticClass:"dropzone-message"},[a("image-icon",{staticClass:"icon-upload",attrs:{size:"28"}}),e._v(" "),a("span",{staticClass:"dropzone-title"},[e._v("\n            "+e._s(e.$t("input_image.title"))+"\n        ")]),e._v(" "),a("span",{staticClass:"dropzone-description"},[e._v("\n            "+e._s(e.$t("input_image.supported"))+"\n        ")])],1)])}),[],!1,null,"eb0cae00",null);t.a=n.exports},"F12+":function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".progress-bar[data-v-f372b280]{width:100%;height:5px;background:#f4f5f6;margin-top:6px;border-radius:10px}.progress-bar span[data-v-f372b280]{background:#00bc7e;display:block;height:100%;border-radius:10px;max-width:100%}@media (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}@media only screen and (min-width:680px) and (prefers-color-scheme:dark){.progress-bar[data-v-f372b280]{background:#1e2024}}",""])},FEcZ:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".setup-box[data-v-664a78dc]{padding:20px;border-radius:8px;margin-bottom:30px}.setup-box .title[data-v-664a78dc]{font-size:1.3125em;margin-bottom:5px;display:block;font-weight:700}.setup-box .description[data-v-664a78dc]{font-size:.9375em;line-height:1.5;margin-bottom:20px}.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#f4f5f6}.setup-box.danger .title[data-v-664a78dc]{color:#fd397a}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#fff}.setup-box[data-v-664a78dc] .form{margin-top:20px}.setup-box[data-v-664a78dc] .form.block-form{max-width:450px}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:flex}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:20px}@media only screen and (max-width:960px){.setup-box[data-v-664a78dc] .form.block-form{max-width:100%}.setup-box[data-v-664a78dc] .form input{min-width:0}}@media only screen and (max-width:690px){.setup-box[data-v-664a78dc]{padding:15px}.setup-box .title[data-v-664a78dc]{font-size:1.0625em;margin-bottom:10px}.setup-box .description[data-v-664a78dc]{font-size:.875em}.setup-box[data-v-664a78dc] .form.block-form .single-line-form{display:block}.setup-box[data-v-664a78dc] .form.block-form .single-line-form .submit-button{margin-left:0;margin-top:10px}}@media (prefers-color-scheme:dark){.setup-box.base[data-v-664a78dc],.setup-box.danger[data-v-664a78dc]{background:#1e2024}.setup-box[data-v-664a78dc] .input-area,.setup-box[data-v-664a78dc] input .input-area,.setup-box[data-v-664a78dc] input[type=number],.setup-box[data-v-664a78dc] input[type=text]{background:#131414}}",""])},IS7u:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".dropzone[data-v-eb0cae00]{border:1px dashed #a1abc2;border-radius:8px;position:relative;text-align:center;display:flex;align-items:center;min-height:175px}.dropzone.is-error[data-v-eb0cae00]{border:2px dashed rgba(253,57,122,.3)}.dropzone.is-error .dropzone-title[data-v-eb0cae00]{color:#fd397a}.dropzone.is-error .icon-upload circle[data-v-eb0cae00],.dropzone.is-error .icon-upload polyline[data-v-eb0cae00],.dropzone.is-error .icon-upload rect[data-v-eb0cae00]{stroke:#fd397a}.dropzone input[type=file][data-v-eb0cae00]{opacity:0;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;width:100%;cursor:pointer}.dropzone .image-preview[data-v-eb0cae00]{position:absolute;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;left:0;padding:25px;display:block}.dropzone .image-preview.fit-image[data-v-eb0cae00]{-o-object-fit:cover;object-fit:cover;border-radius:12px;overflow:hidden}.dropzone .dropzone-message[data-v-eb0cae00]{padding:50px 0;width:100%}.dropzone .dropzone-message .icon-upload circle[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload polyline[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload rect[data-v-eb0cae00]{stroke:#00bc7e}.dropzone .dropzone-message .dropzone-title[data-v-eb0cae00]{font-size:1em;font-weight:700;display:block}.dropzone .dropzone-message .dropzone-description[data-v-eb0cae00]{color:rgba(27,37,57,.7);font-size:.75em}.dropzone .reset-image[data-v-eb0cae00]{z-index:2;background:#fff;border-radius:50px;display:block;position:absolute;right:0;top:0;cursor:pointer;transform:translateY(-50%) translateX(50%);padding:0 4px;box-shadow:0 1px 5px rgba(0,0,0,.12)}.dropzone .reset-image .close-icon[data-v-eb0cae00]{vertical-align:middle}.dropzone .reset-image .close-icon line path[data-v-eb0cae00]{fill:#1b2539}@media (prefers-color-scheme:dark){.dropzone[data-v-eb0cae00]{border-color:hsla(0,0%,100%,.2)}.dropzone .dropzone-message .icon-upload line[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload path[data-v-eb0cae00],.dropzone .dropzone-message .icon-upload polyline[data-v-eb0cae00]{stroke:#00bc7e}.dropzone .dropzone-message .dropzone-description[data-v-eb0cae00]{color:#7d858c}}",""])},Idvm:function(e,t,a){var i=a("lig4");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},LE5O:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".detail-storage-item[data-v-56af1b6e]{margin-bottom:35px}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span{background:#1b2539}.detail-storage-item.images .icon circle[data-v-56af1b6e],.detail-storage-item.images .icon line[data-v-56af1b6e],.detail-storage-item.images .icon path[data-v-56af1b6e],.detail-storage-item.images .icon polygon[data-v-56af1b6e],.detail-storage-item.images .icon polyline[data-v-56af1b6e],.detail-storage-item.images .icon rect[data-v-56af1b6e]{stroke:#9d66fe}.detail-storage-item.images .storage-progress[data-v-56af1b6e] span{background:#9d66fe}.detail-storage-item.videos .icon circle[data-v-56af1b6e],.detail-storage-item.videos .icon line[data-v-56af1b6e],.detail-storage-item.videos .icon path[data-v-56af1b6e],.detail-storage-item.videos .icon polygon[data-v-56af1b6e],.detail-storage-item.videos .icon polyline[data-v-56af1b6e],.detail-storage-item.videos .icon rect[data-v-56af1b6e]{stroke:#ffbd2d}.detail-storage-item.videos .storage-progress[data-v-56af1b6e] span{background:#ffbd2d}.detail-storage-item.audios .icon circle[data-v-56af1b6e],.detail-storage-item.audios .icon line[data-v-56af1b6e],.detail-storage-item.audios .icon path[data-v-56af1b6e],.detail-storage-item.audios .icon polygon[data-v-56af1b6e],.detail-storage-item.audios .icon polyline[data-v-56af1b6e],.detail-storage-item.audios .icon rect[data-v-56af1b6e]{stroke:#fe66a1}.detail-storage-item.audios .storage-progress[data-v-56af1b6e] span{background:#fe66a1}.detail-storage-item.documents .icon circle[data-v-56af1b6e],.detail-storage-item.documents .icon line[data-v-56af1b6e],.detail-storage-item.documents .icon path[data-v-56af1b6e],.detail-storage-item.documents .icon polygon[data-v-56af1b6e],.detail-storage-item.documents .icon polyline[data-v-56af1b6e],.detail-storage-item.documents .icon rect[data-v-56af1b6e]{stroke:#fe6057}.detail-storage-item.documents .storage-progress[data-v-56af1b6e] span{background:#fe6057}.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#1b2539}.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#1b2539}.header-storage-item[data-v-56af1b6e]{display:flex;align-items:flex-start;margin-bottom:10px}.header-storage-item .icon[data-v-56af1b6e]{width:35px}.header-storage-item .type[data-v-56af1b6e]{font-size:.9375em;color:#1b2539}.header-storage-item .total-size[data-v-56af1b6e]{font-size:.625em;display:block;color:rgba(27,37,57,.7)}@media (prefers-color-scheme:dark){.header-storage-item .type[data-v-56af1b6e]{color:#bec6cf}.header-storage-item .total-size[data-v-56af1b6e]{color:#7d858c}.detail-storage-item.disk .icon circle[data-v-56af1b6e],.detail-storage-item.disk .icon line[data-v-56af1b6e],.detail-storage-item.disk .icon path[data-v-56af1b6e],.detail-storage-item.disk .icon polygon[data-v-56af1b6e],.detail-storage-item.disk .icon polyline[data-v-56af1b6e],.detail-storage-item.disk .icon rect[data-v-56af1b6e],.detail-storage-item.others .icon circle[data-v-56af1b6e],.detail-storage-item.others .icon line[data-v-56af1b6e],.detail-storage-item.others .icon path[data-v-56af1b6e],.detail-storage-item.others .icon polygon[data-v-56af1b6e],.detail-storage-item.others .icon polyline[data-v-56af1b6e],.detail-storage-item.others .icon rect[data-v-56af1b6e]{stroke:#41454e}.detail-storage-item.disk .storage-progress[data-v-56af1b6e] span,.detail-storage-item.others .storage-progress[data-v-56af1b6e] span{background:#41454e}}",""])},QO4y:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,"",""])},VA79:function(e,t,a){var i=a("F12+");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},Xk6H:function(e,t,a){"use strict";a("Idvm")},b0xl:function(e,t,a){"use strict";a("oyp5")},"bN/l":function(e,t,a){var i=a("IS7u");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},eZ9V:function(e,t,a){"use strict";var i={name:"FormLabel",components:{Edit2Icon:a("CjXH").q}},o=(a("Xk6H"),a("KHd+")),r=Object(o.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"form-label"},[t("edit-2-icon",{staticClass:"icon",attrs:{size:"22"}}),this._v(" "),t("b",{staticClass:"label"},[this._t("default")],2)],1)}),[],!1,null,"c1157a8e",null);t.a=r.exports},eaI4:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".form[data-v-24d9fd8e]{max-width:700px}.form.inline-form[data-v-24d9fd8e]{display:flex;position:relative;justify-content:center;margin:0 auto}.form.inline-form .input-wrapper[data-v-24d9fd8e]{position:relative}.form.inline-form .input-wrapper .error-message[data-v-24d9fd8e]{position:absolute;left:0;bottom:-25px}.form.block-form .wrapper-inline[data-v-24d9fd8e]{display:flex;margin:0 -15px}.form.block-form .wrapper-inline .block-wrapper[data-v-24d9fd8e]{width:100%;padding:0 15px}.form.block-form .block-wrapper[data-v-24d9fd8e]{margin-bottom:32px}.form.block-form .block-wrapper label[data-v-24d9fd8e]{font-size:.875em;color:rgba(27,37,57,.8);font-weight:700;display:block;margin-bottom:7px;text-align:left}.form.block-form .block-wrapper[data-v-24d9fd8e]:last-child{margin-bottom:0}.form.block-form .button[data-v-24d9fd8e]{margin-top:50px}.form .inline-wrapper[data-v-24d9fd8e]{display:flex;align-items:center;justify-content:space-between}.form .inline-wrapper .switch-label .input-help[data-v-24d9fd8e]{padding-top:0}.form .inline-wrapper .switch-label .input-label[data-v-24d9fd8e]{font-weight:700;color:#1b2539;font-size:1em;margin-bottom:5px}.form .input-help[data-v-24d9fd8e]{font-size:.75em;color:rgba(27,37,57,.7);line-height:1.35;padding-top:10px;display:block}.single-line-form[data-v-24d9fd8e]{display:flex}.single-line-form .submit-button[data-v-24d9fd8e]{margin-left:20px}.error-message[data-v-24d9fd8e]{font-size:.875em;color:#fd397a;padding-top:5px;display:block;text-align:left}textarea[data-v-24d9fd8e]{width:100%}input[type=email][data-v-24d9fd8e],input[type=number][data-v-24d9fd8e],input[type=password][data-v-24d9fd8e],input[type=text][data-v-24d9fd8e],textarea[data-v-24d9fd8e]{border:1px solid transparent;transition:all .15s ease;font-size:1em;border-radius:8px;padding:13px 20px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-weight:700;outline:0;width:100%;box-shadow:0 1px 5px rgba(0,0,0,.12)}input[type=email].is-error[data-v-24d9fd8e],input[type=number].is-error[data-v-24d9fd8e],input[type=password].is-error[data-v-24d9fd8e],input[type=text].is-error[data-v-24d9fd8e],textarea.is-error[data-v-24d9fd8e]{border-color:#fd397a;box-shadow:0 1px 5px rgba(253,57,122,.3)}input[type=email][data-v-24d9fd8e]::-moz-placeholder,input[type=number][data-v-24d9fd8e]::-moz-placeholder,input[type=password][data-v-24d9fd8e]::-moz-placeholder,input[type=text][data-v-24d9fd8e]::-moz-placeholder,textarea[data-v-24d9fd8e]::-moz-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-24d9fd8e]:-ms-input-placeholder,input[type=number][data-v-24d9fd8e]:-ms-input-placeholder,input[type=password][data-v-24d9fd8e]:-ms-input-placeholder,input[type=text][data-v-24d9fd8e]:-ms-input-placeholder,textarea[data-v-24d9fd8e]:-ms-input-placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-24d9fd8e]::placeholder,input[type=number][data-v-24d9fd8e]::placeholder,input[type=password][data-v-24d9fd8e]::placeholder,input[type=text][data-v-24d9fd8e]::placeholder,textarea[data-v-24d9fd8e]::placeholder{color:rgba(27,37,57,.5);font-size:.9375em}input[type=email][data-v-24d9fd8e]:focus,input[type=number][data-v-24d9fd8e]:focus,input[type=password][data-v-24d9fd8e]:focus,input[type=text][data-v-24d9fd8e]:focus,textarea[data-v-24d9fd8e]:focus{border-color:#00bc7e;box-shadow:0 1px 5px rgba(0,188,126,.3)}input[type=email][disabled][data-v-24d9fd8e],input[type=number][disabled][data-v-24d9fd8e],input[type=password][disabled][data-v-24d9fd8e],input[type=text][disabled][data-v-24d9fd8e],textarea[disabled][data-v-24d9fd8e]{background:#fff;color:rgba(27,37,57,.8);-webkit-text-fill-color:rgba(27,37,57,.8);opacity:1;cursor:not-allowed}.additional-link[data-v-24d9fd8e]{font-size:1em;margin-top:50px;display:block;color:#1b2539}.additional-link a[data-v-24d9fd8e],.additional-link b[data-v-24d9fd8e]{color:#00bc7e;cursor:pointer}.additional-link a[data-v-24d9fd8e]:hover,.additional-link b[data-v-24d9fd8e]:hover{text-decoration:underline}@media only screen and (max-width:1024px){.form[data-v-24d9fd8e]{max-width:100%}}@media only screen and (max-width:960px){.form .button[data-v-24d9fd8e]{margin-top:20px;width:100%;margin-left:0;margin-right:0}.form input[data-v-24d9fd8e],.form textarea[data-v-24d9fd8e]{width:100%;min-width:100%}.form.block-form .block-wrapper[data-v-24d9fd8e]{display:block}.form.block-form .block-wrapper label[data-v-24d9fd8e]{width:100%;padding-right:0;display:block;margin-bottom:7px;text-align:left!important;font-size:.875em;padding-top:0}.form.block-form .button[data-v-24d9fd8e]{margin-top:25px;margin-left:0;margin-right:0}.form.inline-form[data-v-24d9fd8e]{display:block}.form.inline-form .input-wrapper .error-message[data-v-24d9fd8e]{position:relative;bottom:0}.form .button[data-v-24d9fd8e]{padding:14px 32px}.single-line-form[data-v-24d9fd8e]{display:block}.single-line-form .submit-button[data-v-24d9fd8e]{margin-left:0;margin-top:20px;width:100%}input[type=email][data-v-24d9fd8e],input[type=number][data-v-24d9fd8e],input[type=password][data-v-24d9fd8e],input[type=text][data-v-24d9fd8e],textarea[data-v-24d9fd8e]{padding:14px 20px}}@media only screen and (max-width:690px){.form.block-form .wrapper-inline[data-v-24d9fd8e]{display:block}}@media (prefers-color-scheme:dark){.form .input-help[data-v-24d9fd8e]{color:#7d858c}.form.block-form .block-wrapper label[data-v-24d9fd8e],.form .inline-wrapper .switch-label .input-label[data-v-24d9fd8e]{color:#bec6cf}input[type=email][data-v-24d9fd8e],input[type=number][data-v-24d9fd8e],input[type=password][data-v-24d9fd8e],input[type=text][data-v-24d9fd8e],textarea[data-v-24d9fd8e]{border-color:#1e2024;background:#1e2024;color:#bec6cf}input[type=email][data-v-24d9fd8e]::-moz-placeholder,input[type=number][data-v-24d9fd8e]::-moz-placeholder,input[type=password][data-v-24d9fd8e]::-moz-placeholder,input[type=text][data-v-24d9fd8e]::-moz-placeholder,textarea[data-v-24d9fd8e]::-moz-placeholder{color:#7d858c}input[type=email][data-v-24d9fd8e]:-ms-input-placeholder,input[type=number][data-v-24d9fd8e]:-ms-input-placeholder,input[type=password][data-v-24d9fd8e]:-ms-input-placeholder,input[type=text][data-v-24d9fd8e]:-ms-input-placeholder,textarea[data-v-24d9fd8e]:-ms-input-placeholder{color:#7d858c}input[type=email][data-v-24d9fd8e]::placeholder,input[type=number][data-v-24d9fd8e]::placeholder,input[type=password][data-v-24d9fd8e]::placeholder,input[type=text][data-v-24d9fd8e]::placeholder,textarea[data-v-24d9fd8e]::placeholder{color:#7d858c}input[type=email][disabled][data-v-24d9fd8e],input[type=number][disabled][data-v-24d9fd8e],input[type=password][disabled][data-v-24d9fd8e],input[type=text][disabled][data-v-24d9fd8e],textarea[disabled][data-v-24d9fd8e]{background:#1e2024;color:rgba(125,133,140,.8);-webkit-text-fill-color:rgba(125,133,140,.8)}}.block-form[data-v-24d9fd8e]{max-width:100%}",""])},gahf:function(e,t,a){"use strict";var i={name:"PageTabGroup"},o=(a("yI2c"),a("KHd+")),r=Object(o.a)(i,(function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"page-tab-group"},[this._t("default")],2)}),[],!1,null,"1bb470e4",null);t.a=r.exports},jS71:function(e,t,a){"use strict";a("wsaA")},l48x:function(e,t,a){"use strict";a("ySns")},lig4:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".form-label[data-v-c1157a8e]{display:flex;align-items:center;margin-bottom:30px}.form-label .icon[data-v-c1157a8e]{margin-right:10px}.form-label .icon path[data-v-c1157a8e]{stroke:#00bc7e}.form-label .label[data-v-c1157a8e]{font-size:1.125em;font-weight:700}@media (prefers-color-scheme:dark){.form-label .label[data-v-c1157a8e]{color:#bec6cf}}",""])},mYUh:function(e,t,a){"use strict";a.r(t);var i=a("A5+z"),o=a("xnZf"),r=a("gahf"),n=a("4TWA"),s=a("D+dh"),d=a("eZ9V"),l=a("Nv84"),p=a("13Td"),c=a("qefO"),m=a("KnjL"),b=a("TJPC"),f=a("vDqi"),u=a.n(f),g=a("L2JU");function v(e,t){var a=Object.keys(e);if(Object.getOwnPropertySymbols){var i=Object.getOwnPropertySymbols(e);t&&(i=i.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),a.push.apply(a,i)}return a}function _(e,t,a){return t in e?Object.defineProperty(e,t,{value:a,enumerable:!0,configurable:!0,writable:!0}):e[t]=a,e}var h={name:"AppAppearance",components:{ValidationObserver:i.ValidationObserver,ValidationProvider:i.ValidationProvider,StorageItemDetail:o.a,PageTabGroup:r.a,SelectInput:n.a,ImageInput:s.a,ButtonBase:l.a,FormLabel:d.a,SetupBox:p.a,required:b.a,PageTab:c.a,InfoBox:m.a},computed:function(e){for(var t=1;t<arguments.length;t++){var a=null!=arguments[t]?arguments[t]:{};t%2?v(Object(a),!0).forEach((function(t){_(e,t,a[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(a)):v(Object(a)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(a,t))}))}return e}({},Object(g.b)(["countries"])),data:function(){return{isLoading:!0,billingInformation:void 0}},mounted:function(){var e=this;u.a.get("/api/settings",{params:{column:"billing_phone_number|billing_postal_code|billing_vat_number|billing_address|billing_country|billing_state|billing_city|billing_name"}}).then((function(t){e.isLoading=!1,e.billingInformation={billing_phone_number:t.data.billing_phone_number,billing_postal_code:t.data.billing_postal_code,billing_vat_number:t.data.billing_vat_number,billing_address:t.data.billing_address,billing_country:t.data.billing_country,billing_state:t.data.billing_state,billing_city:t.data.billing_city,billing_name:t.data.billing_name}}))}},x=(a("l48x"),a("KHd+")),y=Object(x.a)(h,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("PageTab",{staticClass:"form-fixed-width",attrs:{"is-loading":e.isLoading}},[e.billingInformation?a("PageTabGroup",[a("div",{staticClass:"form block-form"},[a("FormLabel",[e._v(e._s(e.$t("admin_settings.billings.section_company")))]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.company_name"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Name",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_name,expression:"billingInformation.billing_name"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.company_name_plac"),type:"text"},domProps:{value:e.billingInformation.billing_name},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_name",t.target.value)},function(t){return e.$updateText("/settings","billing_name",e.billingInformation.billing_name)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,2655941275)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.vat"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Vat Number",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_vat_number,expression:"billingInformation.billing_vat_number"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.vat_plac"),type:"text"},domProps:{value:e.billingInformation.billing_vat_number},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_vat_number",t.target.value)},function(t){return e.$updateText("/settings","billing_vat_number",e.billingInformation.billing_vat_number)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,1879464263)})],1),e._v(" "),a("FormLabel",{staticClass:"mt-70"},[e._v(e._s(e.$t("admin_settings.billings.section_billing")))]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.country"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Country",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("SelectInput",{attrs:{default:e.billingInformation.billing_country,options:e.countries,placeholder:e.$t("admin_settings.billings.country_plac"),isError:i[0]},on:{input:function(t){return e.$updateText("/settings","billing_country",e.billingInformation.billing_country)}},model:{value:e.billingInformation.billing_country,callback:function(t){e.$set(e.billingInformation,"billing_country",t)},expression:"billingInformation.billing_country"}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,682383683)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.address"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Address",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_address,expression:"billingInformation.billing_address"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.address_plac"),type:"text"},domProps:{value:e.billingInformation.billing_address},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_address",t.target.value)},function(t){return e.$updateText("/settings","billing_address",e.billingInformation.billing_address)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,1499604818)})],1),e._v(" "),a("div",{staticClass:"wrapper-inline"},[a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.city"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing City",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_city,expression:"billingInformation.billing_city"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.city_plac"),type:"text"},domProps:{value:e.billingInformation.billing_city},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_city",t.target.value)},function(t){return e.$updateText("/settings","billing_city",e.billingInformation.billing_city)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,2593429539)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.postal_code"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Postal Code",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_postal_code,expression:"billingInformation.billing_postal_code"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.postal_code_plac"),type:"text"},domProps:{value:e.billingInformation.billing_postal_code},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_postal_code",t.target.value)},function(t){return e.$updateText("/settings","billing_postal_code",e.billingInformation.billing_postal_code)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,871160259)})],1)]),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.state"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing State",rules:"required"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_state,expression:"billingInformation.billing_state"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.state_plac"),type:"text"},domProps:{value:e.billingInformation.billing_state},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_state",t.target.value)},function(t){return e.$updateText("/settings","billing_state",e.billingInformation.billing_state)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,2085352051)})],1),e._v(" "),a("div",{staticClass:"block-wrapper"},[a("label",[e._v(e._s(e.$t("admin_settings.billings.phone_number"))+":")]),e._v(" "),a("ValidationProvider",{staticClass:"input-wrapper",attrs:{tag:"div",mode:"passive",name:"Billing Phone Number"},scopedSlots:e._u([{key:"default",fn:function(t){var i=t.errors;return[a("input",{directives:[{name:"model",rawName:"v-model",value:e.billingInformation.billing_phone_number,expression:"billingInformation.billing_phone_number"}],class:{"is-error":i[0]},attrs:{placeholder:e.$t("admin_settings.billings.phone_number_plac"),type:"text"},domProps:{value:e.billingInformation.billing_phone_number},on:{input:[function(t){t.target.composing||e.$set(e.billingInformation,"billing_phone_number",t.target.value)},function(t){return e.$updateText("/settings","billing_phone_number",e.billingInformation.billing_phone_number)}]}}),e._v(" "),i[0]?a("span",{staticClass:"error-message"},[e._v(e._s(i[0]))]):e._e()]}}],null,!1,1212048740)})],1)],1)]):e._e()],1)}),[],!1,null,"24d9fd8e",null);t.default=y.exports},oDxr:function(e,t,a){(e.exports=a("I1BE")(!1)).push([e.i,".page-tab-group[data-v-1bb470e4]{margin-bottom:65px}",""])},oyp5:function(e,t,a){var i=a("LE5O");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},qefO:function(e,t,a){"use strict";var i={name:"PageTab",props:["isLoading"],components:{Spinner:a("zTYo").a}},o=(a("5pbA"),a("KHd+")),r=Object(o.a)(i,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"page-tab"},[t("div",{directives:[{name:"show",rawName:"v-show",value:this.isLoading,expression:"isLoading"}],attrs:{id:"loader"}},[t("Spinner")],1),this._v(" "),this._t("default")],2)}),[],!1,null,"4339da66",null);t.a=r.exports},w9z4:function(e,t,a){"use strict";a("bN/l")},woIv:function(e,t,a){"use strict";a("VA79")},wsaA:function(e,t,a){var i=a("FEcZ");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},xnZf:function(e,t,a){"use strict";var i=a("+Pqb"),o=a("CjXH"),r={name:"StorageItemDetail",props:["percentage","title","type","used"],components:{HardDriveIcon:o.A,FileTextIcon:o.v,ProgressBar:i.a,MusicIcon:o.M,VideoIcon:o.fb,ImageIcon:o.C,FileIcon:o.u}},n=(a("b0xl"),a("KHd+")),s=Object(n.a)(r,(function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("article",{staticClass:"detail-storage-item",class:e.type},[a("div",{staticClass:"header-storage-item"},[a("div",{staticClass:"icon"},["images"==e.type?a("image-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"videos"==e.type?a("video-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"audios"==e.type?a("music-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"documents"==e.type?a("file-text-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"others"==e.type?a("file-icon",{attrs:{size:"23"}}):e._e(),e._v(" "),"disk"==e.type?a("hard-drive-icon",{attrs:{size:"23"}}):e._e()],1),e._v(" "),a("div",{staticClass:"title"},[a("b",{staticClass:"type"},[e._v(e._s(e.title))]),e._v(" "),a("span",{staticClass:"total-size"},[e._v(e._s(e.used))])])]),e._v(" "),a("ProgressBar",{staticClass:"storage-progress",attrs:{progress:e.percentage}})],1)}),[],!1,null,"56af1b6e",null);t.a=s.exports},yI2c:function(e,t,a){"use strict";a("zlQ3")},ySns:function(e,t,a){var i=a("eaI4");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)},zlQ3:function(e,t,a){var i=a("oDxr");"string"==typeof i&&(i=[[e.i,i,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};a("aET+")(i,o);i.locals&&(e.exports=i.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunks/app-billings"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vee-validate/dist/vee-validate.full */ "./node_modules/vee-validate/dist/vee-validate.full.js");
+/* harmony import */ var vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/Others/StorageItemDetail */ "./resources/js/components/Others/StorageItemDetail.vue");
+/* harmony import */ var _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Others/Layout/PageTabGroup */ "./resources/js/components/Others/Layout/PageTabGroup.vue");
+/* harmony import */ var _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Others/Forms/SelectInput */ "./resources/js/components/Others/Forms/SelectInput.vue");
+/* harmony import */ var _components_Others_Forms_ImageInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Others/Forms/ImageInput */ "./resources/js/components/Others/Forms/ImageInput.vue");
+/* harmony import */ var _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/Others/Forms/FormLabel */ "./resources/js/components/Others/Forms/FormLabel.vue");
+/* harmony import */ var _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/FilesView/ButtonBase */ "./resources/js/components/FilesView/ButtonBase.vue");
+/* harmony import */ var _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/components/Others/Forms/SetupBox */ "./resources/js/components/Others/Forms/SetupBox.vue");
+/* harmony import */ var _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/components/Others/Layout/PageTab */ "./resources/js/components/Others/Layout/PageTab.vue");
+/* harmony import */ var _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/components/Others/Forms/InfoBox */ "./resources/js/components/Others/Forms/InfoBox.vue");
+/* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AppAppearance',
+  components: {
+    ValidationObserver: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__["ValidationObserver"],
+    ValidationProvider: vee_validate_dist_vee_validate_full__WEBPACK_IMPORTED_MODULE_0__["ValidationProvider"],
+    StorageItemDetail: _components_Others_StorageItemDetail__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PageTabGroup: _components_Others_Layout_PageTabGroup__WEBPACK_IMPORTED_MODULE_2__["default"],
+    SelectInput: _components_Others_Forms_SelectInput__WEBPACK_IMPORTED_MODULE_3__["default"],
+    ImageInput: _components_Others_Forms_ImageInput__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ButtonBase: _components_FilesView_ButtonBase__WEBPACK_IMPORTED_MODULE_6__["default"],
+    FormLabel: _components_Others_Forms_FormLabel__WEBPACK_IMPORTED_MODULE_5__["default"],
+    SetupBox: _components_Others_Forms_SetupBox__WEBPACK_IMPORTED_MODULE_7__["default"],
+    required: vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_10__["required"],
+    PageTab: _components_Others_Layout_PageTab__WEBPACK_IMPORTED_MODULE_8__["default"],
+    InfoBox: _components_Others_Forms_InfoBox__WEBPACK_IMPORTED_MODULE_9__["default"]
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_12__["mapGetters"])(['countries'])),
+  data: function data() {
+    return {
+      isLoading: true,
+      billingInformation: undefined
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('/api/settings', {
+      params: {
+        column: 'billing_phone_number|billing_postal_code|billing_vat_number|billing_address|billing_country|billing_state|billing_city|billing_name'
+      }
+    }).then(function (response) {
+      _this.isLoading = false;
+      _this.billingInformation = {
+        billing_phone_number: response.data.billing_phone_number,
+        billing_postal_code: response.data.billing_postal_code,
+        billing_vat_number: response.data.billing_vat_number,
+        billing_address: response.data.billing_address,
+        billing_country: response.data.billing_country,
+        billing_state: response.data.billing_state,
+        billing_city: response.data.billing_city,
+        billing_name: response.data.billing_name
+      };
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".form[data-v-4e8c318f] {\n  max-width: 700px;\n}\n.form.inline-form[data-v-4e8c318f] {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  margin: 0 auto;\n}\n.form.inline-form .input-wrapper[data-v-4e8c318f] {\n  position: relative;\n}\n.form.inline-form .input-wrapper .error-message[data-v-4e8c318f] {\n  position: absolute;\n  left: 0;\n  bottom: -25px;\n}\n.form.block-form .wrapper-inline[data-v-4e8c318f] {\n  display: flex;\n  margin: 0 -15px;\n}\n.form.block-form .wrapper-inline .block-wrapper[data-v-4e8c318f] {\n  width: 100%;\n  padding: 0 15px;\n}\n.form.block-form .block-wrapper[data-v-4e8c318f] {\n  margin-bottom: 32px;\n}\n.form.block-form .block-wrapper label[data-v-4e8c318f] {\n  font-size: 0.875em;\n  color: rgba(27, 37, 57, 0.8);\n  font-weight: 700;\n  display: block;\n  margin-bottom: 7px;\n  text-align: left;\n}\n.form.block-form .block-wrapper[data-v-4e8c318f]:last-child {\n  margin-bottom: 0;\n}\n.form.block-form .button[data-v-4e8c318f] {\n  margin-top: 50px;\n}\n.form .inline-wrapper[data-v-4e8c318f] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.form .inline-wrapper .switch-label .input-help[data-v-4e8c318f] {\n  padding-top: 0;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-4e8c318f] {\n  font-weight: 700;\n  color: #1B2539;\n  font-size: 1em;\n  margin-bottom: 5px;\n}\n.form .input-help[data-v-4e8c318f] {\n  font-size: 0.75em;\n  color: rgba(27, 37, 57, 0.7);\n  line-height: 1.35;\n  padding-top: 10px;\n  display: block;\n}\n.single-line-form[data-v-4e8c318f] {\n  display: flex;\n}\n.single-line-form .submit-button[data-v-4e8c318f] {\n  margin-left: 20px;\n}\n.error-message[data-v-4e8c318f] {\n  font-size: 0.875em;\n  color: #fd397a;\n  padding-top: 5px;\n  display: block;\n  text-align: left;\n}\ntextarea[data-v-4e8c318f] {\n  width: 100%;\n}\ntextarea[data-v-4e8c318f],\ninput[type=\"password\"][data-v-4e8c318f],\ninput[type=\"text\"][data-v-4e8c318f],\ninput[type=\"number\"][data-v-4e8c318f],\ninput[type=\"email\"][data-v-4e8c318f] {\n  border: 1px solid transparent;\n  transition: 150ms all ease;\n  font-size: 1em;\n  border-radius: 8px;\n  padding: 13px 20px;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  font-weight: 700;\n  outline: 0;\n  width: 100%;\n  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);\n}\ntextarea.is-error[data-v-4e8c318f],\ninput[type=\"password\"].is-error[data-v-4e8c318f],\ninput[type=\"text\"].is-error[data-v-4e8c318f],\ninput[type=\"number\"].is-error[data-v-4e8c318f],\ninput[type=\"email\"].is-error[data-v-4e8c318f] {\n  border-color: #fd397a;\n  box-shadow: 0 1px 5px rgba(253, 57, 122, 0.3);\n}\ntextarea[data-v-4e8c318f]::-moz-placeholder, input[type=\"password\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"text\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"number\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"email\"][data-v-4e8c318f]::-moz-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-4e8c318f]:-ms-input-placeholder, input[type=\"password\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"text\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"number\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"email\"][data-v-4e8c318f]:-ms-input-placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-4e8c318f]::placeholder,\ninput[type=\"password\"][data-v-4e8c318f]::placeholder,\ninput[type=\"text\"][data-v-4e8c318f]::placeholder,\ninput[type=\"number\"][data-v-4e8c318f]::placeholder,\ninput[type=\"email\"][data-v-4e8c318f]::placeholder {\n  color: rgba(27, 37, 57, 0.5);\n  font-size: 0.9375em;\n}\ntextarea[data-v-4e8c318f]:focus,\ninput[type=\"password\"][data-v-4e8c318f]:focus,\ninput[type=\"text\"][data-v-4e8c318f]:focus,\ninput[type=\"number\"][data-v-4e8c318f]:focus,\ninput[type=\"email\"][data-v-4e8c318f]:focus {\n  border-color: #00BC7E;\n  box-shadow: 0 1px 5px rgba(0, 188, 126, 0.3);\n}\ntextarea[disabled][data-v-4e8c318f],\ninput[type=\"password\"][disabled][data-v-4e8c318f],\ninput[type=\"text\"][disabled][data-v-4e8c318f],\ninput[type=\"number\"][disabled][data-v-4e8c318f],\ninput[type=\"email\"][disabled][data-v-4e8c318f] {\n  background: white;\n  color: rgba(27, 37, 57, 0.8);\n  -webkit-text-fill-color: rgba(27, 37, 57, 0.8);\n  opacity: 1;\n  cursor: not-allowed;\n}\n.additional-link[data-v-4e8c318f] {\n  font-size: 1em;\n  margin-top: 50px;\n  display: block;\n  color: #1B2539;\n}\n.additional-link b[data-v-4e8c318f], .additional-link a[data-v-4e8c318f] {\n  color: #00BC7E;\n  cursor: pointer;\n}\n.additional-link b[data-v-4e8c318f]:hover, .additional-link a[data-v-4e8c318f]:hover {\n  text-decoration: underline;\n}\n@media only screen and (max-width: 1024px) {\n.form[data-v-4e8c318f] {\n    max-width: 100%;\n}\n}\n@media only screen and (max-width: 960px) {\n.form .button[data-v-4e8c318f] {\n    margin-top: 20px;\n    width: 100%;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form input[data-v-4e8c318f], .form textarea[data-v-4e8c318f] {\n    width: 100%;\n    min-width: 100%;\n}\n.form.block-form .block-wrapper[data-v-4e8c318f] {\n    display: block;\n}\n.form.block-form .block-wrapper label[data-v-4e8c318f] {\n    width: 100%;\n    padding-right: 0;\n    display: block;\n    margin-bottom: 7px;\n    text-align: left !important;\n    font-size: 0.875em;\n    padding-top: 0;\n}\n.form.block-form .button[data-v-4e8c318f] {\n    margin-top: 25px;\n    margin-left: 0;\n    margin-right: 0;\n}\n.form.inline-form[data-v-4e8c318f] {\n    display: block;\n}\n.form.inline-form .input-wrapper .error-message[data-v-4e8c318f] {\n    position: relative;\n    bottom: 0;\n}\n.form .button[data-v-4e8c318f] {\n    padding: 14px 32px;\n}\n.single-line-form[data-v-4e8c318f] {\n    display: block;\n}\n.single-line-form .submit-button[data-v-4e8c318f] {\n    margin-left: 0;\n    margin-top: 20px;\n    width: 100%;\n}\ntextarea[data-v-4e8c318f],\n  input[type=\"password\"][data-v-4e8c318f],\n  input[type=\"number\"][data-v-4e8c318f],\n  input[type=\"text\"][data-v-4e8c318f],\n  input[type=\"email\"][data-v-4e8c318f] {\n    padding: 14px 20px;\n}\n}\n@media only screen and (max-width: 690px) {\n.form.block-form .wrapper-inline[data-v-4e8c318f] {\n    display: block;\n}\n}\n@media (prefers-color-scheme: dark) {\n.form .input-help[data-v-4e8c318f] {\n    color: #7d858c;\n}\n.form.block-form .block-wrapper label[data-v-4e8c318f] {\n    color: #bec6cf;\n}\n.form .inline-wrapper .switch-label .input-label[data-v-4e8c318f] {\n    color: #bec6cf;\n}\ntextarea[data-v-4e8c318f],\n  input[type=\"password\"][data-v-4e8c318f],\n  input[type=\"text\"][data-v-4e8c318f],\n  input[type=\"number\"][data-v-4e8c318f],\n  input[type=\"email\"][data-v-4e8c318f] {\n    border-color: #1e2024;\n    background: #1e2024;\n    color: #bec6cf;\n}\ntextarea[data-v-4e8c318f]::-moz-placeholder, input[type=\"password\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"text\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"number\"][data-v-4e8c318f]::-moz-placeholder, input[type=\"email\"][data-v-4e8c318f]::-moz-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-4e8c318f]:-ms-input-placeholder, input[type=\"password\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"text\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"number\"][data-v-4e8c318f]:-ms-input-placeholder, input[type=\"email\"][data-v-4e8c318f]:-ms-input-placeholder {\n    color: #7d858c;\n}\ntextarea[data-v-4e8c318f]::placeholder,\n  input[type=\"password\"][data-v-4e8c318f]::placeholder,\n  input[type=\"text\"][data-v-4e8c318f]::placeholder,\n  input[type=\"number\"][data-v-4e8c318f]::placeholder,\n  input[type=\"email\"][data-v-4e8c318f]::placeholder {\n    color: #7d858c;\n}\ntextarea[disabled][data-v-4e8c318f],\n  input[type=\"password\"][disabled][data-v-4e8c318f],\n  input[type=\"text\"][disabled][data-v-4e8c318f],\n  input[type=\"number\"][disabled][data-v-4e8c318f],\n  input[type=\"email\"][disabled][data-v-4e8c318f] {\n    background: #1e2024;\n    color: rgba(125, 133, 140, 0.8);\n    -webkit-text-fill-color: rgba(125, 133, 140, 0.8);\n}\n}\n.block-form[data-v-4e8c318f] {\n  max-width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "PageTab",
+    { staticClass: "form-fixed-width", attrs: { "is-loading": _vm.isLoading } },
+    [
+      _vm.billingInformation
+        ? _c("PageTabGroup", [
+            _c(
+              "div",
+              { staticClass: "form block-form" },
+              [
+                _c("FormLabel", [
+                  _vm._v(
+                    _vm._s(_vm.$t("admin_settings.billings.section_company"))
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.company_name")) +
+                          ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing Name",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.billingInformation.billing_name,
+                                      expression:
+                                        "billingInformation.billing_name"
+                                    }
+                                  ],
+                                  class: { "is-error": errors[0] },
+                                  attrs: {
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.company_name_plac"
+                                    ),
+                                    type: "text"
+                                  },
+                                  domProps: {
+                                    value: _vm.billingInformation.billing_name
+                                  },
+                                  on: {
+                                    input: [
+                                      function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.billingInformation,
+                                          "billing_name",
+                                          $event.target.value
+                                        )
+                                      },
+                                      function($event) {
+                                        return _vm.$updateText(
+                                          "/settings",
+                                          "billing_name",
+                                          _vm.billingInformation.billing_name
+                                        )
+                                      }
+                                    ]
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        2655941275
+                      )
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.vat")) + ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing Vat Number",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.billingInformation
+                                          .billing_vat_number,
+                                      expression:
+                                        "billingInformation.billing_vat_number"
+                                    }
+                                  ],
+                                  class: { "is-error": errors[0] },
+                                  attrs: {
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.vat_plac"
+                                    ),
+                                    type: "text"
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.billingInformation.billing_vat_number
+                                  },
+                                  on: {
+                                    input: [
+                                      function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.billingInformation,
+                                          "billing_vat_number",
+                                          $event.target.value
+                                        )
+                                      },
+                                      function($event) {
+                                        return _vm.$updateText(
+                                          "/settings",
+                                          "billing_vat_number",
+                                          _vm.billingInformation
+                                            .billing_vat_number
+                                        )
+                                      }
+                                    ]
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        1879464263
+                      )
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("FormLabel", { staticClass: "mt-70" }, [
+                  _vm._v(
+                    _vm._s(_vm.$t("admin_settings.billings.section_billing"))
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.country")) + ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing Country",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("SelectInput", {
+                                  attrs: {
+                                    default:
+                                      _vm.billingInformation.billing_country,
+                                    options: _vm.countries,
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.country_plac"
+                                    ),
+                                    isError: errors[0]
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      return _vm.$updateText(
+                                        "/settings",
+                                        "billing_country",
+                                        _vm.billingInformation.billing_country
+                                      )
+                                    }
+                                  },
+                                  model: {
+                                    value:
+                                      _vm.billingInformation.billing_country,
+                                    callback: function($$v) {
+                                      _vm.$set(
+                                        _vm.billingInformation,
+                                        "billing_country",
+                                        $$v
+                                      )
+                                    },
+                                    expression:
+                                      "billingInformation.billing_country"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        682383683
+                      )
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.address")) + ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing Address",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.billingInformation.billing_address,
+                                      expression:
+                                        "billingInformation.billing_address"
+                                    }
+                                  ],
+                                  class: { "is-error": errors[0] },
+                                  attrs: {
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.address_plac"
+                                    ),
+                                    type: "text"
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.billingInformation.billing_address
+                                  },
+                                  on: {
+                                    input: [
+                                      function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.billingInformation,
+                                          "billing_address",
+                                          $event.target.value
+                                        )
+                                      },
+                                      function($event) {
+                                        return _vm.$updateText(
+                                          "/settings",
+                                          "billing_address",
+                                          _vm.billingInformation.billing_address
+                                        )
+                                      }
+                                    ]
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        1499604818
+                      )
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "wrapper-inline" }, [
+                  _c(
+                    "div",
+                    { staticClass: "block-wrapper" },
+                    [
+                      _c("label", [
+                        _vm._v(
+                          _vm._s(_vm.$t("admin_settings.billings.city")) + ":"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ValidationProvider", {
+                        staticClass: "input-wrapper",
+                        attrs: {
+                          tag: "div",
+                          mode: "passive",
+                          name: "Billing City",
+                          rules: "required"
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var errors = ref.errors
+                                return [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value:
+                                          _vm.billingInformation.billing_city,
+                                        expression:
+                                          "billingInformation.billing_city"
+                                      }
+                                    ],
+                                    class: { "is-error": errors[0] },
+                                    attrs: {
+                                      placeholder: _vm.$t(
+                                        "admin_settings.billings.city_plac"
+                                      ),
+                                      type: "text"
+                                    },
+                                    domProps: {
+                                      value: _vm.billingInformation.billing_city
+                                    },
+                                    on: {
+                                      input: [
+                                        function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.billingInformation,
+                                            "billing_city",
+                                            $event.target.value
+                                          )
+                                        },
+                                        function($event) {
+                                          return _vm.$updateText(
+                                            "/settings",
+                                            "billing_city",
+                                            _vm.billingInformation.billing_city
+                                          )
+                                        }
+                                      ]
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  errors[0]
+                                    ? _c(
+                                        "span",
+                                        { staticClass: "error-message" },
+                                        [_vm._v(_vm._s(errors[0]))]
+                                      )
+                                    : _vm._e()
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          2593429539
+                        )
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "block-wrapper" },
+                    [
+                      _c("label", [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$t("admin_settings.billings.postal_code")
+                          ) + ":"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ValidationProvider", {
+                        staticClass: "input-wrapper",
+                        attrs: {
+                          tag: "div",
+                          mode: "passive",
+                          name: "Billing Postal Code",
+                          rules: "required"
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var errors = ref.errors
+                                return [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value:
+                                          _vm.billingInformation
+                                            .billing_postal_code,
+                                        expression:
+                                          "billingInformation.billing_postal_code"
+                                      }
+                                    ],
+                                    class: { "is-error": errors[0] },
+                                    attrs: {
+                                      placeholder: _vm.$t(
+                                        "admin_settings.billings.postal_code_plac"
+                                      ),
+                                      type: "text"
+                                    },
+                                    domProps: {
+                                      value:
+                                        _vm.billingInformation
+                                          .billing_postal_code
+                                    },
+                                    on: {
+                                      input: [
+                                        function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.billingInformation,
+                                            "billing_postal_code",
+                                            $event.target.value
+                                          )
+                                        },
+                                        function($event) {
+                                          return _vm.$updateText(
+                                            "/settings",
+                                            "billing_postal_code",
+                                            _vm.billingInformation
+                                              .billing_postal_code
+                                          )
+                                        }
+                                      ]
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  errors[0]
+                                    ? _c(
+                                        "span",
+                                        { staticClass: "error-message" },
+                                        [_vm._v(_vm._s(errors[0]))]
+                                      )
+                                    : _vm._e()
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          871160259
+                        )
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.state")) + ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing State",
+                        rules: "required"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.billingInformation.billing_state,
+                                      expression:
+                                        "billingInformation.billing_state"
+                                    }
+                                  ],
+                                  class: { "is-error": errors[0] },
+                                  attrs: {
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.state_plac"
+                                    ),
+                                    type: "text"
+                                  },
+                                  domProps: {
+                                    value: _vm.billingInformation.billing_state
+                                  },
+                                  on: {
+                                    input: [
+                                      function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.billingInformation,
+                                          "billing_state",
+                                          $event.target.value
+                                        )
+                                      },
+                                      function($event) {
+                                        return _vm.$updateText(
+                                          "/settings",
+                                          "billing_state",
+                                          _vm.billingInformation.billing_state
+                                        )
+                                      }
+                                    ]
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        2085352051
+                      )
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "block-wrapper" },
+                  [
+                    _c("label", [
+                      _vm._v(
+                        _vm._s(_vm.$t("admin_settings.billings.phone_number")) +
+                          ":"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ValidationProvider", {
+                      staticClass: "input-wrapper",
+                      attrs: {
+                        tag: "div",
+                        mode: "passive",
+                        name: "Billing Phone Number"
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "default",
+                            fn: function(ref) {
+                              var errors = ref.errors
+                              return [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.billingInformation
+                                          .billing_phone_number,
+                                      expression:
+                                        "billingInformation.billing_phone_number"
+                                    }
+                                  ],
+                                  class: { "is-error": errors[0] },
+                                  attrs: {
+                                    placeholder: _vm.$t(
+                                      "admin_settings.billings.phone_number_plac"
+                                    ),
+                                    type: "text"
+                                  },
+                                  domProps: {
+                                    value:
+                                      _vm.billingInformation
+                                        .billing_phone_number
+                                  },
+                                  on: {
+                                    input: [
+                                      function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.billingInformation,
+                                          "billing_phone_number",
+                                          $event.target.value
+                                        )
+                                      },
+                                      function($event) {
+                                        return _vm.$updateText(
+                                          "/settings",
+                                          "billing_phone_number",
+                                          _vm.billingInformation
+                                            .billing_phone_number
+                                        )
+                                      }
+                                    ]
+                                  }
+                                }),
+                                _vm._v(" "),
+                                errors[0]
+                                  ? _c(
+                                      "span",
+                                      { staticClass: "error-message" },
+                                      [_vm._v(_vm._s(errors[0]))]
+                                    )
+                                  : _vm._e()
+                              ]
+                            }
+                          }
+                        ],
+                        null,
+                        false,
+                        1212048740
+                      )
+                    })
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Billings.vue?vue&type=template&id=4e8c318f&scoped=true& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true&");
+/* harmony import */ var _Billings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Billings.vue?vue&type=script&lang=js& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& */ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Billings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "4e8c318f",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Billings.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=style&index=0&id=4e8c318f&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_style_index_0_id_4e8c318f_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Billings.vue?vue&type=template&id=4e8c318f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Admin/AppSettings/AppSettingsTabs/Billings.vue?vue&type=template&id=4e8c318f&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Billings_vue_vue_type_template_id_4e8c318f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
